@@ -51,11 +51,44 @@ body {
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: StingerFit;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
 h2 {
   font-family: StingerFit;
   color: var(--amdBluePrimary);
   font-size: 64px;
-  margin-bottom: 20px;
+  line-height: 56px;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: StingerFit;
+  color: var(--amdPink);
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+h4 {
+  font-family: StingerFit;
+  color: var(--amdBluePrimary);
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  margin: 0;
+}
+
+p{
+  font-family: GeneralSansRegular;
+  color: var(--amdBlack);
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -91,11 +124,12 @@ img {
   cursor: pointer;
   position: relative;
   width: fit-content;
+  padding-top: 40px;
 }
 
 .button::after {
   content: "";
-  width: 100%;
+  width: 128%;
   height: 16px;
   background-color: var(--amdYellow);
   position: absolute;
@@ -104,17 +138,14 @@ img {
   z-index: -1;
 }
 
-.button:hover {
-  font-family: StingerFit;
-}
 
 .button:hover:after {
-  height: 24px;
+  height: 48px;
   bottom: 0px;
 }
 
 .services {
-  padding: 40px 100px;
+  padding: 120px 100px;
   display: flex;
   align-items: center;
 }
@@ -129,11 +160,7 @@ img {
   justify-content: space-between;
 }
 
-.service-list-container p{
-  color: var(--amdPink);
-  font-size: 32px;
-  margin-bottom: 16px;
-}
+
 
 .service-list-container ul {
   list-style-type: none;
@@ -147,9 +174,7 @@ img {
   font-size: 18px;
   margin-bottom: 8px;
 }
-#portfolio {
-  margin-top: 80px;
-}
+
 #portfolio .row-container {
   display: flex;
   justify-content: flex-start;
@@ -177,6 +202,11 @@ img {
   transition: all ease .5s;
 }
 
+#portfolio .row-container .portfolio-hover h3 {
+  margin: 0;
+  color: var(--amdwhite);
+}
+
 #portfolio .row-container .portfolio-hover p {
   margin: 0;
   color: var(--amdwhite);
@@ -187,12 +217,13 @@ img {
   font-family: GeneralSansRegular;
 }
 
+/*
 #portfolio .row-container .portfolio-hover p:nth-child(even) {
   font-size: 32px;
   font-family: StingerFit;
   margin: 24px 0px;
   text-transform: uppercase;
-}
+} */
 
 #portfolio .row-container .portfolio-hover:hover {
   opacity: 1;
@@ -212,9 +243,6 @@ img {
 
 .row-banner div p {
   color: var(--amdBlack);
-  font-size: 28px;
-  font-weight: 500;
-  font-family: GeneralSansRegular;
 }
 
 .testimonials {
@@ -236,14 +264,6 @@ img {
 
 .testimonials .slick-list {
   padding:0 20% 0 0 !important;
-}
-
-.testimonials p {
-  text-align: center;
-  color: var(--amdBluePrimary);
-  font-family: StingerFit;
-  font-size: 54px;
-  margin: 0;
 }
 
 .testimonials .testimonial-list-item .slick-item-container{
@@ -276,9 +296,6 @@ img {
 
 .testimonials .testimonial-list-item .slick-item-container .testimonial-right p:nth-child(2) {
   text-align: left;
-  font-size: 28px;
-  color: var(--amdBlack);
-  margin-top: 24px;
 }
 
 #hire-form {
@@ -302,12 +319,6 @@ img {
   color: var(--amdBluePrimary);
   font-family: StingerFit;
   margin: 0;
-}
-
-#hire-form > div:nth-child(1) .flex-row p {
-  font-size: 24px;
-  color: var(--amdBlack);
-  font-family: GeneralSansRegular;
 }
 
 #hire-form > div:nth-child(2) {
@@ -383,20 +394,14 @@ img {
   margin-bottom: 20px;
 }
 
-.footer .footer-container .footer-form h3 {
-  margin: 0;
-  color: var(--amdBluePrimary);
-  font-size: 40px;
-  font-family: StingerFit;
-}
-
+/*
 .footer .footer-container .footer-form > div:nth-child(1) p {
   font-size: 22px;
   color: var(--amdBlack);
   font-family: GeneralSansRegular;
   margin: 0;
   margin-left: 32px;
-}
+} */
 
 .footer .footer-container .footer-form .input-row {
   width: 100%;
