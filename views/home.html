@@ -13,6 +13,7 @@
   </head>
   <body>
     <!-- Intro Section -->
+    <%- include("partials/header.html") %>
     <section
       class="flex-container"
     >
@@ -245,11 +246,10 @@
       </div>
     </section>
     <section
-      style="padding: 40px 0px; display: flex; justify-content: center;"
+      class="banner-section"
     >
-      <p
-        style="color: var(--amdBlack); font-size: 24px; font-family: GeneralSansRegular; text-transform: uppercase;"
-      >We're a friendly bunch. stay connected with us on Instagram @addmoredesign_studio</p>
+      <p>
+        <span>We're a friendly bunch. stay connected with us on Instagram </span>@addmoredesign_studio</p>
     </section>
     <section
       class="footer"
@@ -269,7 +269,7 @@
           <a>Work</a>
           <a>Services</a>
         </div>
-        <div class="link-section">
+        <div class="link-section link-sec2">
           <a>About</a>
           <a>Journal</a>
           <a>Contact</a>
@@ -277,7 +277,7 @@
         <div class="footer-form">
           <div>
             <h4>Stay Connected</h4>
-            <p style="align-self: flex-end;">Get dibs on new product, business & design tips.</p>
+            <p>Get dibs on new product, business & design tips.</p>
           </div>
           <div
             class="input-row"
@@ -311,6 +311,15 @@
           autoplaySpeed: 2000,
         });
       });
+
+      const sidebarButtons = document.querySelectorAll(".sidebar-toggle");
+      if (sidebarButtons && sidebarButtons.length > 0) {
+        sidebarButtons.forEach(button => {
+          button.addEventListener("click", () => {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+          })
+        })
+      }
     </script>
   </body>
 </html>
