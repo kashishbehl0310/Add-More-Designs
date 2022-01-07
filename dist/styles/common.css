@@ -533,7 +533,7 @@ input {
 
   .flex-container div:nth-child(2) {
     padding: 0px 28px;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .flex-container div:nth-child(2) h1{
@@ -549,7 +549,7 @@ input {
 
   .services {
     flex-direction: column;
-    padding: 80px 80px;
+    padding: 80px 28px;
   }
 
   .services .button {
@@ -564,7 +564,7 @@ input {
 
   .services > div:nth-child(1) h2 {
     font-size: 32px;
-    text-align: center;
+    text-align: left;
   }
 
   .services > div:nth-child(2) {
@@ -625,8 +625,8 @@ input {
   }
   .footer .footer-container .link-section {
     margin-top: 24px;
-    text-align: center;
     margin-top: 32px;
+    align-self: flex-start;
   }
   .footer .footer-container .link-section a {
     margin-bottom: 24px;
