@@ -243,7 +243,7 @@ input {
 #portfolio .row-container > div {
   width: 33.33%;
   position: relative;
-  height: 379px;
+  height: 479.94px;
 }
 
 #portfolio .row-container .portfolio-hover {
@@ -383,6 +383,10 @@ input {
   color: var(--amdBluePrimary);
   font-family: StingerFit;
   margin: 0;
+}
+
+#hire-form img {
+  margin-top: 40px;
 }
 
 #hire-form > div:nth-child(2) {
@@ -573,6 +577,15 @@ input {
   }
   .service-list-container {
     margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .service-list-container h3 {
+    width: 48%;
+  }
+
+  .service-list-container ul {
+    width: 48%;
   }
   #portfolio .row-container {
     flex-direction: column;
