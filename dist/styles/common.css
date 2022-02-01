@@ -48,7 +48,7 @@ body {
 
 h1 {
   font-family: StingerFit;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 48px;
   font-weight: 400;
 }
@@ -56,7 +56,7 @@ h1 {
 h2 {
   font-family: StingerFit;
   color: var(--amdBluePrimary);
-  font-size: 64px;
+  font-size: 32px;
   line-height: 40px;
   font-weight: 400;
   margin-top: 0;
@@ -65,11 +65,11 @@ h2 {
 h3 {
   font-family: StingerFit;
   color: var(--amdPink);
-  font-size: 32px;
+  font-size: 24px;
   line-height: 36px;
   font-weight: 400;
   margin: 0;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 h4 {
@@ -84,7 +84,7 @@ h4 {
 p{
   font-family: GeneralSansRegular;
   color: var(--amdBlack);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
@@ -124,7 +124,7 @@ input {
 .button {
   font-family: ZodiacItalic;
   color: var(--amdBluePrimary);
-  font-size: 40px;
+  font-size: 24px;
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
@@ -135,7 +135,7 @@ input {
 .button::after {
   content: "";
   width: 128%;
-  height: 16px;
+  height: 8px;
   background-color: var(--amdYellow);
   position: absolute;
   bottom: 4px;
@@ -145,7 +145,7 @@ input {
 
 
 .button:hover:after {
-  height: 48px;
+  height: 32px;
   bottom: 0px;
 }
 
@@ -203,7 +203,7 @@ input {
 }
 
 .services {
-  padding: 80px 100px;
+  padding: 32px 200px;
   display: flex;
   align-items: center;
 }
@@ -230,7 +230,7 @@ input {
   font-family: GeneralSansRegular;
   color: var(--amdBlack);
   font-size: 18px;
-  margin-bottom: 8px;
+  line-height: 32px;
 }
 
 #portfolio .row-container {
@@ -269,6 +269,7 @@ input {
 #portfolio .row-container .portfolio-hover p {
   margin: 0;
   color: var(--amdwhite);
+  font-size: 16px;
 }
 
 #portfolio .row-container .portfolio-hover p:nth-child(odd) {
@@ -289,7 +290,7 @@ input {
 }
 
 .row-banner {
-  margin-top: 40px;
+  margin-top: 32px;
 }
 
 .row-banner div {
@@ -307,8 +308,13 @@ input {
 }
 
 .testimonials {
-  margin-top: 80px;
+  margin-top: 32px;
   text-align: center;
+}
+
+.testimonials h2 {
+  line-height: unset;
+  margin-bottom: 16px;
 }
 
 .testimonials .container {
@@ -330,7 +336,7 @@ input {
 
 .testimonials .testimonial-list-item .slick-item-container{
   display: flex;
-  width: 1152px;
+  width: 1520px;
   padding: 0px 64px;
 }
 
@@ -346,7 +352,7 @@ input {
 }
 
 .testimonials .testimonial-list-item .slick-item-container .testimonial-right p:nth-child(1) {
-  font-size: 32px;
+  font-size: 24px;
   color: var(--amdPink);
   font-family: StingerFit;
   text-align: left;
@@ -357,6 +363,13 @@ input {
 }
 
 .testimonials .testimonial-list-item .slick-item-container .testimonial-right p:nth-child(2) {
+  font-size: 16px;
+  text-align: left;
+  color: var(--amdPink);
+  margin-bottom: 8px;
+}
+
+.testimonials .testimonial-list-item .slick-item-container .testimonial-right p:nth-child(3) {
   text-align: left;
 }
 
@@ -364,8 +377,13 @@ input {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 80px 0;
+  margin: 32px 0;
 
+}
+
+#hire-form h2 {
+  margin-bottom: 16px;
+  line-height: unset;
 }
 
 #hire-form div {
@@ -386,7 +404,7 @@ input {
 }
 
 #hire-form img {
-  margin-top: 40px;
+  margin-top: 8px;
 }
 
 #hire-form > div:nth-child(2) {
@@ -406,7 +424,7 @@ input {
   border-width: 0 0 4px;
   border-color: var(---amdBlueSecondary);
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 #hire-form > div:nth-child(2) .input-row:nth-child(1) input {
@@ -424,9 +442,13 @@ input {
   background-color: var(---amdBlueSecondary);
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 64px;
   /* padding: 80px 156px; */
+}
+
+.footer .footer-container img {
+  width: 240px;
 }
 
 /* .footer .footer-container > div {
@@ -443,10 +465,11 @@ input {
 }
 
 .footer .footer-container .link-section a {
-  font-family: ZodiacItalic;
-  font-size: 32px;
+  font-family: StingerFit;
+  font-size: 16px;
   color: var(--amdBlack);
-  margin-bottom: 32px;
+  margin-bottom: 0;
+  line-height: 40px;
   text-transform: uppercase;
 }
 
@@ -459,6 +482,7 @@ input {
 }
 .footer .footer-container .footer-form > div:nth-child(1) {
   display: flex;
+  flex-direction: column;
 }
 
 /*
@@ -470,6 +494,10 @@ input {
   margin-left: 32px;
 } */
 
+.footer .footer-container .footer-form h4 {
+  font-size: 32px;
+}
+
 .footer .footer-container .footer-form .input-row {
   width: 100%;
 }
@@ -479,7 +507,7 @@ input {
   border-width: 0 0 4px;
   border-color: var(---amdWhite);
   width: 100%;
-  margin-top: 40px;
+  margin-top: 16px;
   background: transparent;
 }
 
@@ -490,8 +518,8 @@ input {
 }
 
 .footer .footer-container .footer-form > div:nth-child(1) p {
-  align-self: flex-end;
-  margin-left: 16px;
+  font-size: 16px;
+  margin-top: 16px;
 }
 
 .footer .footer-container .button {
@@ -500,7 +528,7 @@ input {
 
 .footer .icon-list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .banner-section {
@@ -511,7 +539,7 @@ input {
 
 .banner-section p {
   color: var(--amdBlack); 
-  font-size: 24px;
+  font-size: 16px;
   font-family: GeneralSansRegular;
   text-transform: uppercase;
 }
