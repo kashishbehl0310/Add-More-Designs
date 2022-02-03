@@ -46,40 +46,45 @@ body {
   box-sizing: border-box;
 }
 
-h1 {
+h1, h2 {
   font-family: StingerFit;
+  color: var(--amdBluePrimary);
   font-size: 32px;
-  line-height: 48px;
   font-weight: 400;
+  margin: unset;
 }
 
 h2 {
+  margin-bottom: 16px;
+}
+
+/* h2 {
   font-family: StingerFit;
   color: var(--amdBluePrimary);
   font-size: 32px;
   line-height: 40px;
   font-weight: 400;
   margin-top: 0;
-}
+} */
 
 h3 {
   font-family: StingerFit;
   color: var(--amdPink);
   font-size: 24px;
-  line-height: 36px;
   font-weight: 400;
-  margin: 0;
-  padding-bottom: 8px;
+  text-transform: uppercase;
+  margin: unset;
+  margin-bottom: 8px;
 }
 
-h4 {
+/* h4 {
   font-family: StingerFit;
   color: var(--amdBluePrimary);
   font-size: 40px;
   line-height: 40px;
   font-weight: 400;
   margin: 0;
-}
+} */
 
 p{
   font-family: GeneralSansRegular;
@@ -97,7 +102,7 @@ img {
 input {
   font-family: GeneralSansRegular;
   color: var(--amdBlack);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -129,16 +134,15 @@ input {
   cursor: pointer;
   position: relative;
   width: fit-content;
-  padding-top: 40px;
 }
 
 .button::after {
   content: "";
   width: 128%;
-  height: 8px;
+  height: 16px;
   background-color: var(--amdYellow);
   position: absolute;
-  bottom: 4px;
+  bottom: 0px;
   left: 0;
   z-index: -1;
 }
@@ -146,7 +150,7 @@ input {
 
 .button:hover:after {
   height: 32px;
-  bottom: 0px;
+  
 }
 
 .header {
@@ -188,10 +192,10 @@ input {
 
 #sidebar ul li {
   color: var(--amdwhite);
-  font-size: 32px;
+  font-size: 24px;
   font-family: ZodiacItalic;
   text-transform: uppercase;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
 }
 
 #sidebar ul li a {
@@ -229,7 +233,6 @@ input {
 .service-list-container li {
   font-family: GeneralSansRegular;
   color: var(--amdBlack);
-  font-size: 18px;
   line-height: 32px;
 }
 
@@ -262,7 +265,6 @@ input {
 }
 
 #portfolio .row-container .portfolio-hover h3 {
-  margin: 0;
   color: var(--amdwhite);
 }
 
@@ -369,10 +371,10 @@ input {
 .row-banner div p {
   color: var(--amdBlack);
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 16px;
 }
 
-.testimonials {
+.testimonials h2{
   margin-top: 32px;
   text-align: center;
 }
@@ -390,7 +392,7 @@ input {
 }
 
 .testimonials .slick-slide {
-  text-align: center;
+ 
   color: #419be0;
   background: white;
 }
@@ -461,12 +463,12 @@ input {
   width: 50%;
 }
 
-#hire-form > div:nth-child(1) .flex-row h3 {
+/* #hire-form > div:nth-child(1) .flex-row h3 {
   font-size: 64px;
   color: var(--amdBluePrimary);
   font-family: StingerFit;
   margin: 0;
-}
+} */
 
 #hire-form img {
   margin-top: 8px;
@@ -486,7 +488,7 @@ input {
 
 #hire-form > div:nth-child(2) .input-row input {
   outline: 0;
-  border-width: 0 0 4px;
+  border-width: 0 0 2px;
   border-color: var(---amdBlueSecondary);
   width: 100%;
   margin-bottom: 32px;
@@ -497,7 +499,7 @@ input {
 }
 
 #hire-form > div:nth-child(2) .input-row input::placeholder {
-  font-size: 18px;
+  font-size: 16px;
   font-family: StingerFit;
   color: var(--amdBlack);
 }
@@ -506,9 +508,10 @@ input {
   width: 100%;
   background-color: var(---amdBlueSecondary);
   display: flex;
+  
   justify-content: space-between;
   align-items: flex-start;
-  padding: 64px;
+  padding: 32px 64px;
   /* padding: 80px 156px; */
 }
 
@@ -526,7 +529,7 @@ input {
 }
 
 .footer .footer-container .icon-list svg {
-  margin-top: 24px;
+  margin-top: 16px;
 }
 
 .footer .footer-container .link-section a {
@@ -559,9 +562,6 @@ input {
   margin-left: 32px;
 } */
 
-.footer .footer-container .footer-form h4 {
-  font-size: 32px;
-}
 
 .footer .footer-container .footer-form .input-row {
   width: 100%;
@@ -569,22 +569,21 @@ input {
 
 .footer .footer-container .footer-form .input-row input {
   outline: 0;
-  border-width: 0 0 4px;
+  border-width: 0 0 2px;
   border-color: var(---amdWhite);
   width: 100%;
-  margin-top: 16px;
+  margin-bottom: 32px;
   background: transparent;
 }
 
 .footer .footer-container .footer-form .input-row input::placeholder {
-  font-size: 18px;
+  font-size: 16px;
   font-family: StingerFit;
   color: var(--amdBlack);
 }
 
 .footer .footer-container .footer-form > div:nth-child(1) p {
-  font-size: 16px;
-  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .footer .footer-container .button {
@@ -597,7 +596,7 @@ input {
 }
 
 .banner-section {
-  padding: 40px 0px;
+  padding: 16px 0px;
   display: flex;
   justify-content: center;
 }
@@ -629,13 +628,12 @@ input {
   }
 
   .flex-container div:nth-child(2) {
-    padding: 0px 28px;
+    padding: 0px 24px;
     align-items: flex-start;
   }
 
   .flex-container div:nth-child(2) h1{
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 32px;
   }
   .button {
     font-size: 32px;
@@ -674,11 +672,11 @@ input {
     justify-content: space-between;
   }
   .service-list-container h3 {
-    width: 48%;
+    width: 40%;
   }
 
   .service-list-container ul {
-    width: 48%;
+    width: 56%;
   }
   #portfolio .row-container {
     flex-direction: column;
@@ -719,7 +717,7 @@ input {
   #hire-form {
     flex-direction: column;
     padding: 0px 24px;
-    margin: 24px 0px;
+    margin: 32px 0px;
   }
   #hire-form h2 {
     font-size: 32px;
@@ -746,8 +744,8 @@ input {
   }
 
   .footer .footer-container {
-    padding: 32px;
     flex-direction: column;
+    
   }
   .footer .footer-container .link-section {
     margin-top: 24px;
@@ -765,9 +763,7 @@ input {
     width: 100%;
     flex-direction: column;
   }
-  .footer .footer-container .footer-form h4 {
-    font-size: 32px;
-  }
+ 
   .footer .footer-container .footer-form > div:nth-child(1) {
     flex-direction: column;
   }
