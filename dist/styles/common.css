@@ -277,17 +277,82 @@ input {
   font-family: GeneralSansRegular;
 }
 
-/*
-#portfolio .row-container .portfolio-hover p:nth-child(even) {
-  font-size: 32px;
-  font-family: StingerFit;
-  margin: 24px 0px;
-  text-transform: uppercase;
-} */
-
 #portfolio .row-container .portfolio-hover:hover {
   opacity: 1;
 }
+
+/* portfolio section/ */
+
+#projects {
+  padding: 32px 64px 0 64px;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.project-item {
+  width: 48%;
+  margin-bottom: 32px;
+}
+
+.project-item .project-image-container {
+  position: relative;
+}
+
+.project-item .project-image-container img {
+  height: 330px;
+  object-fit: cover;
+  width: 100%;
+  /* height: calc(630px * 9 / 16); */
+}
+
+.project-item .project-image-container .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.project-item .project-image-container .img-hover:hover {
+  opacity: 1;
+}
+
+.project-item .project-image-container .project-image {
+  background-image: url("/img/project-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.project-item .project-image-container:hover .project-image{
+  background-image: url("/img/project-2.png");
+}
+
+.project-item h3 {
+  color: var(--amdBluePrimary);
+  margin-top: 16px;
+  padding-bottom: 0px;
+}
+
+.project-item h3 a {
+  text-decoration: none;
+}
+
+.project-item p {
+  font-size: 16px;
+}
+
+.project-item p a {
+  text-decoration: none;
+  color: var(--amdBlack);
+}
+
+/* Banners */
 
 .row-banner {
   margin-top: 32px;
@@ -581,7 +646,7 @@ input {
 
   .services {
     flex-direction: column;
-    padding: 80px 28px;
+    padding: 32px 32px 8px 32px;
   }
 
   .services .button {
@@ -622,6 +687,26 @@ input {
     width: 100%;
     height: 375px;
   }
+
+  #projects {
+    padding: 0px;
+    padding-top: 32px;
+  }
+  
+  .project-item {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .project-item p {
+    display: none;
+  }
+
+  .project-item h3 {
+    padding-left: 24px;
+  }
+  
+
   .testimonials .testimonial-list-item .slick-item-container {
     flex-direction: column;
     width: 352px;
