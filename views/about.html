@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Add More Designs</title>
+  <%- include("partials/styles.html") %>
+  <link href="/about.css" rel="stylesheet">
+</head>
+<body id="about">
+  <%- include("partials/header.html") %>
+  <section
+   class="about-intro" 
+  >
+    <div>
+      <h1 class="hide-lg">Hey you. It's nice to see you here.</h1>
+      <img src="/img/about.png" />
+      <div class="about-text">
+        <h1 class="hide-xs">Hey you. It's nice to see you here.</h1>
+        <p>We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.</p>
+        <a class="button btn-primary">
+          Hire Us
+        </a>
+      </div>
+    </div>
+  </section>
+  <%- include("partials/repeatedBanner.html", { text: "Book a consulatation" }) %>
+  <section
+    class="why-us"
+  >
+    <div class="heading-container">
+      <h2>Why Us?</h2>
+    </div>
+    <div class="about-pointers">
+      <div>
+        <h3 class="accordian-heading accordion-new">USP1</h3>
+        <p class="panel-new">We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.</p>
+      </div>
+      <div>
+        <h3 class="accordian-heading accordion-new">USP1</h3>
+        <p class="panel-new">We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.</p>
+      </div>
+      <div>
+        <h3 class="accordian-heading accordion-new">USP1</h3>
+        <p class="panel-new">We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.</p>
+      </div>
+      <div>
+        <h3 class="accordian-heading accordion-new">USP1</h3>
+        <p class="panel-new">We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.</p>
+      </div>
+    </div>
+  </section>
+  <%- include("partials/repeatedBanner.html", { text: "Book a consulatation" }) %>
+  <section class="book-section">
+    <div>
+      <h2>We'll make a great team.</h2>
+      <p>We're still taking projects for 2022. Schedule a FREE consultation call to discover how we can help transform your business.</p>
+      <a class="button btn-primary">
+        Submit
+      </a>
+    </div>
+    <div></div>
+  </section>
+  <section
+    class="banner-section"
+  >
+    <p>
+      <span>We're a friendly bunch. stay connected with us on Instagram </span>@addmoredesign_studio
+    </p>
+  </section>
+  <%- include("partials/footer.html") %>
+  <%- include("partials/scripts.html") %>
+  <script>
+    function handleAccordian() {
+      $(`.accordian-heading`).on("click", function() {
+        if (window.innerWidth >= 500) {
+          return;
+        }
+        if ($(this).hasClass("accordian-active-new")) {
+          $(this).removeClass("accordian-active-new");
+          var panel = this.nextElementSibling;
+          panel.style.maxHeight = "0px";
+        } else {
+          $(`.accordian-heading`).removeClass("accordian-active-new");
+          $(this).addClass("accordian-active-new");
+          $(`.about-pointers .panel-new`).css("max-height", "0");
+          var panel = this.nextElementSibling;
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      })
+    }
+    handleAccordian();
+    var accHeading = document.getElementsByClassName("accordian-heading");
+    accHeading[0].click();
+    $(window).resize(function() {
+      if (screen.width >= 500) {
+        $(`.about-pointers .panel-new`).css("max-height", "unset");
+      } else {
+        var accHeading = document.getElementsByClassName("accordian-heading");
+        accHeading[0].click();
+      }
+    });
+  </script>
+</body>
+</html>

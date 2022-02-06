@@ -1,0 +1,12 @@
+<script>
+  const sidebarButtons = document.querySelectorAll(".sidebar-toggle");
+  if (sidebarButtons && sidebarButtons.length > 0) {
+    sidebarButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        document.getElementById("sidebar").classList.toggle("collapsed");
+      })
+    })
+  }
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>

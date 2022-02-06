@@ -8,5 +8,9 @@ siteRouter.get("/", (req, res) => {
   res.render("home.html", {});
 });
 
+siteRouter.get("/about", (req, res) => {
+  res.render("about.html", {});
+})
+
 module.exports = siteRouter;
 

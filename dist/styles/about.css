@@ -1,0 +1,132 @@
+#about .about-intro {
+  padding: 0px 64px;
+}
+
+#about .about-intro > div{
+  display: flex;
+  align-items: center;
+}
+
+.about-intro .about-text {
+  width: 80%;
+  margin-left: 6px;
+}
+
+.about-intro .about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-intro .about-text h1 {
+  margin-bottom: 16px;
+}
+
+.about-intro .about-text p {
+  margin-bottom: 16px;
+}
+
+#about .why-us {
+  padding: 32px 64px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#about .why-us .heading-container{
+  text-align: center;
+  width: 20%;
+}
+
+#about .why-us .about-pointers {
+  width: 74%;
+}
+
+#about .why-us .about-pointers > div {
+  margin-bottom: 24px;
+}
+.book-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 64px;
+}
+.book-section > div:nth-child(1){
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.book-section > div:nth-child(1) p {
+  margin: 16px 0px;
+}
+
+.book-section > div:nth-child(2) {
+  min-height: 316px;
+  width: 50%;
+  background-color: #c4c4c4;
+}
+
+.accordion-new:after {
+  content: url("/img/add-fill.svg");
+  color: #fff;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  display: none;
+}
+
+.accordian-active-new:after {
+  content: url("/img/subtract-fill.svg");
+  display: none;
+  float: right;
+}
+
+@media (max-width: 500px) {
+  #about .about-intro {
+    padding: 0px 24px;
+    padding-top: 88px;
+  }
+  #about .about-intro > div {
+    flex-direction: column;
+  }
+  .about-intro .about-text {
+    margin-left: 0px;
+    width: 100%;
+    margin-top: 16px;
+  }
+  #about .why-us {
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+  #about .why-us .heading-container {
+    width: 100%;
+    text-align: left;
+  }
+  #about .why-us .about-pointers {
+    width: 100%;
+  }
+  .accordion-new:after {
+    display: block;
+  }
+  
+  .accordian-active-new:after {
+    display: block;
+  }
+  .book-section {
+    flex-direction: column-reverse;
+    padding: 0px;
+  }
+  .book-section > div:nth-child(2) {
+    width: 100%;
+  }
+  .book-section > div:nth-child(1) {
+    width: 100%;
+    padding: 16px 24px;
+    padding-bottom: 40px;
+  }
+  .panel-new {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}
