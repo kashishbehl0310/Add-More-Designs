@@ -730,9 +730,9 @@ input {
     padding-left: 24px;
   }
 
-  .testimonials #tns1 > .tns-item {
-    /* padding-left: 24px; */
-  }
+  /* .testimonials #tns1 > .tns-item {
+    padding-left: 24px;
+  } */
   
   #hire-form {
     flex-direction: column;
@@ -765,6 +765,8 @@ input {
 
   .footer .footer-container {
     flex-direction: column;
+    padding: 24px;
+    align-items: center;
     
   }
   .footer .footer-container .link-section {
@@ -787,10 +789,10 @@ input {
   .footer .footer-container .footer-form > div:nth-child(1) {
     flex-direction: column;
   }
-  .footer .footer-container .footer-form > div:nth-child(1) p {
+  /* .footer .footer-container .footer-form > div:nth-child(1) p {
     margin-left: 0;
     margin-top: 24px;
-  }
+  } */
   .banner-section span {
     display: none;
   }
