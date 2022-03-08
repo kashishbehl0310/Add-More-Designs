@@ -1,0 +1,113 @@
+#work .intro-section {
+  display: flex;
+  padding: 0px 64px;
+  margin-bottom: 32px;
+  padding-top: 132px;
+}
+
+#work .intro-section div:nth-child(1) {
+  min-width: 22%;
+  display: flex;
+  justify-content: center;
+}
+
+#work .contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0px;
+}
+
+#work .contact-section p {
+  font-size: 32px;
+  color: var(--amdBluePrimary);
+  font-family: StingerFit;
+  margin-bottom: 16px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content > div {
+  width: 50%;
+}
+
+.modal-content img {
+  height: 100%;
+}
+
+.modal-content .form-section {
+  padding: 0px 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-container {
+  margin-top: 16px;
+}
+
+@media (max-width: 500px) {
+  #work .intro-section {
+    padding: 0px 24px;
+    margin-bottom: 32px;
+    padding-top: 88px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #work .intro-section p{
+    margin-top: 16px;
+  }
+  .modal-content {
+    width: 80%;
+  }
+  #work .contact-section {
+    padding: 24px;
+    padding-top: 8px;
+  }
+  .button {
+    font-size: 24px;
+  }
+
+  .modal-content .form-section {
+    padding: 64px 24px;
+  }
+  .modal-content > div {
+    width: 100%;
+  }
+}

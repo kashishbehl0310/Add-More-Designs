@@ -10,6 +10,10 @@ siteRouter.get("/", (req, res) => {
 
 siteRouter.get("/about", (req, res) => {
   res.render("about.html", {});
+});
+
+siteRouter.get("/work", (req,res) => {
+  res.render("work.html", {});
 })
 
 module.exports = siteRouter;

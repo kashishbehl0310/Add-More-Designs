@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add More Designs</title>
+    <%- include("partials/styles.html") %>
+    <link href="/work.css" rel="stylesheet">
+  </head>
+  <body id="work">
+    <!-- Intro Section -->
+    <%- include("partials/header.html") %>
+    <section class="intro-section">
+      <div>
+        <h1>Work</h1>
+      </div>
+      <div>
+        <p>
+          We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.
+        </p>
+      </div>
+    </section>
+    <%- include("partials/projects.html") %>
+    <section
+      class="banner-section"
+    >
+      <p>
+        <span>We're a friendly bunch. stay connected with us on Instagram </span>@addmoredesign_studio</p>
+    </section>
+    <section class="contact-section">
+      <div>
+        <p>Let's create something unique together☀️</p>
+        <a id="work-with-us" class="button btn-primary">
+          Work with us
+        </a>
+      </div>
+    </section>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="hide-xs">
+          <img src="/img/hire_us.png" />
+        </div>
+        <div class="form-section">
+          <h2>Hire Us</h2>
+          <p>
+            We're taking projects for 2022. Fill up the form and we'll get back to you in a jiffy!
+          </p>
+          <div class="form-container">
+            <div
+              class="input-row"
+            >
+              <input
+                placeholder="Your Name & Pronouns"
+              />
+              
+            </div>
+            <div class="input-row">
+              <input
+                placeholder="Your Email Address"
+              />
+            </div>
+            <div
+              class="input-row"
+            >
+              <input
+                placeholder="Your website / Instagram or any other
+                link"
+              />
+            </div>
+            <div
+              class="input-row"
+            >
+              <input
+                placeholder="What can we help you with? The more details, the better."
+              />
+            </div>
+            <a class="button btn-primary">
+              Submit
+            </a>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    <%- include("partials/footer.html") %>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <script>
+      const modalButton = document.getElementById("work-with-us");
+      var modal = document.getElementById("myModal");
+      modalButton.onclick = function(e) {
+        modal.style.display = "block";
+      }
+      window.onclick = function(e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+    <%- include("partials/scripts.html") %>
+  </body>
+</html>

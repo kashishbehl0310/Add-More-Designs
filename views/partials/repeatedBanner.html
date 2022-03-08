@@ -3,7 +3,11 @@
 >
   <div>
     <marquee>
-      <p><%= text %></p>
+      <p>
+        <% for(var i = 0; i < 100; i++) { %>
+          <%= text %>&nbsp; |&nbsp;
+        <% } %>
+      </p>
     </marquee>
   </div>
 </section>
