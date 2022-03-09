@@ -82,6 +82,19 @@
   margin-top: 16px;
 }
 
+
+.form-container .button {
+  z-index: 99999999;
+}
+
+.form-container .button span {
+  z-index: 99999999;
+}
+
+.form-container .button::after {
+  z-index: -1;
+}
+
 @media (max-width: 500px) {
   #work .intro-section {
     padding: 0px 24px;
