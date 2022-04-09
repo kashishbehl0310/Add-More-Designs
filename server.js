@@ -7,6 +7,7 @@ const compression = require("compression");
 
 const siteRoutes = require("./routes/ui/site");
 const siteRouter = require("./routes/ui/site");
+const apiRouter = require("./routes/api/apiRoutes");
 
 // Initializing Express Server
 const app = express();
@@ -60,6 +61,8 @@ app.use((req, res, next) => {
   // res.cookie("id", config.appKey);
   next();
 });
+
+app.use("/api", apiRouter);
 
 app.use("/", siteRouter);
 

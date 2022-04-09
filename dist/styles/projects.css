@@ -1,0 +1,50 @@
+#project .project-cover {
+  height: 786px;
+}
+#project .project-cover img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#project .client-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 32px 64px;
+}
+
+#project .client-intro .client-details {
+  width: 16%;
+}
+
+#project .client-intro .client-details h3 {
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+#project .client-intro .client-details p {
+  line-height: 22px;
+}
+
+#project .client-intro .client-description {
+  width: 80%;
+}
+
+#project .client-intro .client-description h1 {
+  margin-bottom: 16px;
+}
+
+#project .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#project .gallery img {
+  width: 50%;
+}
+
+#project .gallery img:nth-child(1) {
+  width: 100%;
+}

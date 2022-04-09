@@ -28,79 +28,10 @@
       <p>
         <span>We're a friendly bunch. stay connected with us on Instagram </span>@addmoredesign_studio</p>
     </section>
-    <section class="contact-section">
-      <div>
-        <p>Let's create something unique together☀️</p>
-        <a id="work-with-us" class="button btn-primary">
-          Work with us
-        </a>
-      </div>
-    </section>
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="hide-xs">
-          <img src="/img/hire_us.png" />
-        </div>
-        <div class="form-section">
-          <h2>Hire Us</h2>
-          <p>
-            We're taking projects for 2022. Fill up the form and we'll get back to you in a jiffy!
-          </p>
-          <div class="form-container">
-            <div
-              class="input-row"
-            >
-              <input
-                placeholder="Your Name & Pronouns"
-              />
-              
-            </div>
-            <div class="input-row">
-              <input
-                placeholder="Your Email Address"
-              />
-            </div>
-            <div
-              class="input-row"
-            >
-              <input
-                placeholder="Your website / Instagram or any other
-                link"
-              />
-            </div>
-            <div
-              class="input-row"
-            >
-              <input
-                placeholder="What can we help you with? The more details, the better."
-              />
-            </div>
-            <a class="button btn-primary">
-              <span>
-                Submit
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    
-    </div>
+    <%- include("partials/contactForm.html") %>
     <%- include("partials/footer.html") %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-    <script>
-      const modalButton = document.getElementById("work-with-us");
-      var modal = document.getElementById("myModal");
-      modalButton.onclick = function(e) {
-        modal.style.display = "block";
-      }
-      window.onclick = function(e) {
-        if (e.target === modal) {
-          modal.style.display = "none";
-        }
-      }
-    </script>
+    
     <%- include("partials/scripts.html") %>
   </body>
 </html>
