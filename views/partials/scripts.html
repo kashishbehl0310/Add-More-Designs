@@ -9,4 +9,20 @@
   }
 </script>
 
+<script>
+  function onshare(medium) {
+    const encodedUrl = encodeURIComponent(window.location.href);
+    if (medium === "fb") {
+      const fbUrl = `https://www.facebook.com/sharer.php?t=${encodedUrl}`;
+      window.open(fbUrl, "_blank")
+    } else if (medium === "twitter") {
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodedUrl}`;
+      window.open(twitterUrl, "_blank")
+    } else if (medium === "linkedin") {
+      const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
+      window.open(linkedinUrl, "_blank");
+    }
+  }
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>

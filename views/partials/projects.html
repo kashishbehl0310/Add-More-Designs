@@ -2,81 +2,70 @@
   id="projects"
 >
   <div class="flex-wrapper">
-    <div class="project-item">
-      <div class="project-image-container">
-        <a href="/project/1">
-          <img src="/img/project-1.png" />
-          <img class="img-hover" src="/img/project-2.png" />
-        </a>
+    <% for (let i=0; i < projects.length; i++) { %>
+      <div class="project-item">
+        <div class="project-image-container">
+          <a href="/project/<%= projects[i].id %>">
+            <img src="/img/<%= projects[i].coverImage %>" />
+            <img class="img-hover" src="/img/project-2.png" />
+          </a>
+        </div>
+        <h3>
+          <a href="/project/<%= projects[i].id %>">
+            <%= projects[i].name %>
+          </a>
+        </h3>
+        <p>
+          <a href="/project/<%= projects[i].id %>">
+            <%= projects[i].intro %>
+          </a>
+        </p>
       </div>
-      <h3>
-        <a href="/project/1">
-          Client Name
-        </a>
-      </h3>
-      <p>
-        <a href="/project/1">
-          We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. 
-        </a>
-      </p>
-    </div>
-    <div class="project-item">
-      <div class="project-image-container">
-        <a href="/project/1">
-          <img src="/img/project-1.png" />
-          <img class="img-hover" src="/img/project-2.png" />
-        </a>
-        <!-- <div class="project-image"></div> -->
-      </div>
-      <h3>
-        <a href="/project/1">
-          Client Name
-        </a>
-      </h3>
-      <p>
-        <a href="/project/1">
-          We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. 
-        </a>
-      </p>
-    </div>
-    <div class="project-item">
-      <div class="project-image-container">
-        <a href="/project/1">
-          <img src="/img/project-1.png" />
-          <img class="img-hover" src="/img/project-2.png" />
-        </a>
-        <!-- <div class="project-image"></div> -->
-      </div>
-      <h3>
-        <a href="/project/1">
-          Client Name
-        </a>
-      </h3>
-      <p>
-        <a href="/project/1">
-          We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. 
-        </a>
-      </p>
-    </div>
-    <div class="project-item">
-      <div class="project-image-container">
-        <a href="/project/1">
-          <img src="/img/project-1.png" />
-          <img class="img-hover" src="/img/project-2.png" />
-        </a>
-        <!-- <div class="project-image"></div> -->
-      </div>
-      <a href="/project/1"></a>
-      <h3>
-        <a href="/project/1">
-          Client Name
-        </a>
-      </h3>
-      <p>
-        <a href="/project/1">
-          We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. 
-        </a>
-      </p>
-    </div>
+    <% } %>
+  </div>
+  <div class="load-more-container" style="display: flex; justify-content: center; padding-bottom: 32px;">
+    <button id="load-more" class="button btn-primary" >See more</button>
   </div>
 </section>
+
+<script>
+  let index = 0;
+  document.getElementById("load-more").addEventListener("click", function() {
+    index = index + 4;
+    fetch("/api/projects?limit=4&offset=" + index)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        let projects = data.projects;
+        let html = "";
+        for (let i = 0; i < projects.length; i++) {
+          html += `
+            <div class="project-item">
+              <div class="project-image-container">
+                <a href="/project/${projects[i].id}">
+                  <img src="/img/${projects[i].coverImage}" />
+                  <img class="img-hover" src="/img/project-2.png" />
+                </a>
+              </div>
+              <h3>
+                <a href="/project/${projects[i].id}">
+                  ${projects[i].name}
+                </a>
+              </h3>
+              <p>
+                <a href="/project/${projects[i].id}">
+                  ${projects[i].intro}
+                </a>
+              </p>
+            </div>
+          `;
+        }
+        document.getElementsByClassName("flex-wrapper")[0].innerHTML += html;
+        if (projects.length === 0) document.getElementsByClassName("load-more-container")[0].style.display = "none";
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  })
+</script>

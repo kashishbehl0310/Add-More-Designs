@@ -364,18 +364,33 @@ input {
   margin-top: 32px;
 } */
 
+@keyframes moveLeft {
+  from {
+      transform: translatex(-20%);
+  }
+  to {
+      transform: translatex(-100%);
+  }
+}
+
+.row-banner {
+  background-color: var(--amdGreen);
+}
+
 .row-banner div {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: var(--amdGreen);
   padding: 16px 0px;
+  animation: moveLeft 15s linear infinite;
 }
 
 .row-banner div p {
   color: var(--amdBlack);
   text-transform: uppercase;
   font-size: 16px;
+  
+  white-space: nowrap;
 }
 
 /* Testimonials */
@@ -711,6 +726,17 @@ input {
 
 .form-container .button::after {
   z-index: -1;
+}
+
+.social-share {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.social-share p {
+  margin-right: 22px;
+  cursor: pointer;
 }
 
 @media (max-width: 500px) {
