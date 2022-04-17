@@ -26,6 +26,10 @@ siteRouter.get("/work", (req,res) => {
   });
 })
 
+siteRouter.get("/services", (req, res) => {
+  res.render("services.html", {});
+});
+
 siteRouter.get("/project/:id", renderProjectController);
 
 module.exports = siteRouter;

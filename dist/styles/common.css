@@ -156,7 +156,7 @@ input {
 }
 
 .header {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   display: flex;
   justify-content: flex-end;
@@ -375,9 +375,55 @@ input {
 
 .row-banner {
   background-color: var(--amdGreen);
+  padding: 16px 0px;
 }
 
-.row-banner div {
+.marquee{
+  -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+  position: relative;
+  overflow: hidden;
+  --offset: 20vw;
+  --item-font-size: 10vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+}
+
+.marquee__inner{
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial),0,0);
+  animation: marquee 5s linear infinite;
+  /* // animation-play-state: paused; */
+}
+
+.marquee span{
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.marquee:hover .marquee__inner{
+  /* // animation-play-state: running;
+	// opacity: 1;
+	// transition-duration: 0.4s; */
+}
+
+@keyframes marquee {
+  0% {
+  transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+   transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+
+
+/* .row-banner div {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -391,7 +437,7 @@ input {
   font-size: 16px;
   
   white-space: nowrap;
-}
+} */
 
 /* Testimonials */
 .testimonials {
@@ -518,7 +564,7 @@ input {
 .input-row input {
   outline: 0;
   border-width: 0 0 2px;
-  border-color: var(---amdBlueSecondary);
+  border-color: var(--amdBlueSecondary);
   width: 100%;
   margin-bottom: 32px;
 }
@@ -534,7 +580,7 @@ input {
 
 .footer .footer-container {
   width: 100%;
-  background-color: var(---amdBlueSecondary);
+  background-color: var(--amdBlueSecondary);
   display: flex;
   
   justify-content: space-between;
@@ -739,7 +785,42 @@ input {
   cursor: pointer;
 }
 
+#subscribe.modal .modal-content {
+  height: 540px;
+}
+
+#subscribe.modal .right-section {
+  background-image: url("/img/hire_us.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: GeneralSansRegular;
+} 
+
+#subscribe.modal .right-section ul li {
+  font-size: 16px;
+}
+
 @media (max-width: 500px) {
+  #subscribe.modal {
+    padding-top: 60px;
+  }
+  #subscribe.modal .modal-content {
+    height: auto;
+  }
+  #subscribe.modal .modal-content {
+    flex-direction: column-reverse;
+  }
+  #subscribe.modal .right-section {
+    height: 150px;
+  }
+  #subscribe.modal .right-section ul {
+    display: none;
+  }
+  #subscribe.modal .modal-content .form-section {
+    padding: 24px;
+  }
   .hide-lg {
     display: block;
   }

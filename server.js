@@ -5,8 +5,8 @@ const cookieParser = require("cookie-parser");
 const ejs = require("ejs");
 const compression = require("compression");
 
-const siteRoutes = require("./routes/ui/site");
 const siteRouter = require("./routes/ui/site");
+const mailerRouter = require("./routes/ui/mailer");
 const apiRouter = require("./routes/api/apiRoutes");
 
 // Initializing Express Server
@@ -63,6 +63,7 @@ app.use((req, res, next) => {
 });
 
 app.use("/api", apiRouter);
+app.use("/mail", mailerRouter);
 
 app.use("/", siteRouter);
 

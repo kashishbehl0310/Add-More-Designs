@@ -25,4 +25,58 @@
   }
 </script>
 
+<script>
+  // contact Form Modal
+  const modalButton = document.getElementsByClassName("modal-trigger-btn");
+  var modal = document.getElementById("myModal");
+  if (modalButton && modalButton.length > 0) {
+    for (let i = 0; i < modalButton.length; i++) {
+      modalButton[i].onclick = function(e) {
+        modal.style.display = "block";
+      }
+    }
+  }
+
+  // open subscribe to newsletter modal after 5s
+  var subcribeModal = document.getElementById("subscribe");
+  setTimeout(function() {
+    subcribeModal.style.display = "block";
+  }, 2000);
+
+    // close modal on click outside
+    window.onclick = function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+
+    if (e.target === subcribeModal) {
+      subcribeModal.style.display = "none";
+    }
+  }
+
+  // send contact form data
+  const sendDetails = (mail) => {
+    fetch("/api/save-details", {
+      method: "POST",
+      body: mail
+    })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => console.log(data))
+    .catch((err) => {
+      console.log(err);
+    })
+  }
+
+  // const btn = document.getElementById("submit");
+  // btn.addEventListener("click", sendDetails);
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let mail = new FormData(form);
+    sendDetails(mail);
+  })
+</script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>

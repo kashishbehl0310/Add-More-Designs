@@ -62,7 +62,7 @@
       <a style="visibility: <% if(data.prev) { %> visible; <% } else { %>hidden;<% } %>" href="<%= data.prev %>" class="button btn-primary">Prev</a>
       <a style="visibility: <% if(data.next) { %> visible; <% } else { %>hidden;<% } %>"  href="<%= data.next %>" class="button btn-primary">Next</a>
     </div>
-    <%- include("partials/contactForm.html") %>
+    <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>
     <section
       class="banner-section"
     >

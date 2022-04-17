@@ -16,12 +16,12 @@
             <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/work">Work</a>
-            <a>Services</a>
+            <a href="/services">Services</a>
           </div>
           <div class="link-section link-sec2">
             <a>Pro-Bono Program</a>
             <a>Journal</a>
-            <a>Contact</a>
+            <a class="modal-trigger-btn">Contact</a>
             <a>Privacy Policy</a>
           </div>
         </div>
@@ -30,23 +30,64 @@
             <h2>Stay Connected</h2>
             <p>Get dibs on new product, business & design tips.</p>
           </div>
-          <div
-            class="input-row"
+          <form
+            class="newsletter-form"
+            method="POST"
+            action="send"
+            enctype="multipart/form-data"
+            style="width: 80%;"
           >
-            <input
-              placeholder="Your Name & Pronouns"
-            />
-          </div>
-          <div
-            class="input-row"
-          >
-            <input
-              placeholder="Your Email Address"
-            />
-          </div>
-          <a class="button btn-primary">
-            Submit
-          </a>
+            <div
+              class="input-row"
+            >
+              <input
+                placeholder="Your Name & Pronouns"
+                name="name"
+                required
+                type="text"
+              />
+            </div>
+            <div
+              class="input-row"
+            >
+              <input
+                placeholder="Your Email Address"
+                name="email"
+                type="email"
+                required
+              />
+            </div>
+            <button type="submit" value="submit" class="button btn-primary welcome-btn">
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </section>
+    <script>
+
+      const subscribeNewsLetter = (formData) => {
+        fetch("/api/subscribe", {
+          method: "POST",
+          body: formData
+        })
+        .then((respnse) => {
+          return respnse.json();
+        })
+        .then((data) => console.log(data))
+        .catch((err) => {
+          console.log(err);
+        });
+      }
+
+      const forms = document.getElementsByClassName("newsletter-form");
+      if (forms && forms.length > 0) {
+        for (let i = 0; i < forms.length; i ++) {
+          forms[i].addEventListener("submit", (e) => {
+            e.preventDefault();
+            let formData = new FormData(forms[i]);
+            subscribeNewsLetter(formData);
+          })
+        }
+      }
+    </script>

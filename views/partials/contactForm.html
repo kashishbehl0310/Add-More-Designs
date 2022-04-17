@@ -1,119 +1,18 @@
 <section class="contact-section">
   <div>
-    <p>Let's create something unique together☀️</p>
-    <a id="work-with-us" class="button btn-primary">
-      Work with us
+    <p>
+      <% if (text) { %>
+        <%- text %>
+      <% } else { %>
+        Let's create something unique together☀️
+      <% } %>
+    </p>
+    <a class="button btn-primary modal-trigger-btn">
+      <% if (btnText) { %>
+        <%- btnText %>
+      <% } else { %>
+        Work with us
+      <% } %>
     </a>
   </div>
 </section>
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="hide-xs">
-      <img src="/img/hire_us.png" />
-    </div>
-    <div class="form-section">
-      <h2>Hire Us</h2>
-      <p>
-        We're taking projects for 2022. Fill up the form and we'll get back to you in a jiffy!
-      </p>
-      <div class="form-container">
-        <form
-          id="contact-form"
-          method="POST"
-          action="send"
-          enctype="multipart/form-data"
-        >
-        <div
-          class="input-row"
-        >
-          <input
-            placeholder="Your Name & Pronouns"
-            id="name"
-            name="name"
-            type="text"
-            required
-          />
-          
-        </div>
-        <div class="input-row">
-          <input
-            placeholder="Your Email Address"
-            id="email"
-            name="email"
-            type="email"
-            required
-          />
-        </div>
-        <div
-          class="input-row"
-        >
-          <input
-            placeholder="Your website / Instagram or any other
-            link"
-            id="website"
-            name="website"
-            type="text"
-          />
-        </div>
-        <div
-          class="input-row"
-        >
-          <input
-            id="message"
-            name="message"
-            type="text"
-            placeholder="What can we help you with? The more details, the better."
-            required
-          />
-        </div>
-        <button type="submit" value="submit" class="button btn-primary">
-          <span>
-            Submit
-          </span>
-        </button>
-      </form>
-       
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script>
-  const modalButton = document.getElementById("work-with-us");
-  var modal = document.getElementById("myModal");
-  modalButton.onclick = function(e) {
-    modal.style.display = "block";
-  }
-  window.onclick = function(e) {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  }
-
-  // send contact form data
-  const sendDetails = (mail) => {
-    fetch("/api/save-details", {
-      method: "POST",
-      body: mail
-    })
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => console.log(data))
-    .catch((err) => {
-      console.log(err);
-    })
-  }
-
-  // const btn = document.getElementById("submit");
-  // btn.addEventListener("click", sendDetails);
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let mail = new FormData(form);
-    sendDetails(mail);
-  })
-</script>

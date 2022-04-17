@@ -1,0 +1,41 @@
+const path = require("path");
+const ejs = require("ejs");
+
+const formParse = require("../utils/formParser");
+const mailWrapper = require("../utils/mailWrapper");
+const config = require("../config/app");
+
+async function subscribe(req, res) {
+  const rePath = path.join(__dirname, "../");
+  const parsedData = await formParse(req);
+  if (parsedData) {
+    const { name, email } = parsedData;
+    ejs.renderFile(rePath + "views/mailer/welcome.ejs", {
+      name,
+      email
+    }, async (err, html) => {
+      if (err) {
+        console.log("err parsing template", err);
+      } else {
+        const mailOptions = {
+          sender: config.nodemailerEmail,
+          to: email , // receiver email,
+          subject: `Thank you for subscribing ${name}`,
+          html
+        };
+        let resp = await mailWrapper(mailOptions);
+        if (resp) {
+          res.status(200).send({
+            success: true
+          });
+        } else {
+          return res.status(500).send({
+            success: false
+          });
+        }
+      }
+    })
+  }
+}
+
+module.exports = subscribe;

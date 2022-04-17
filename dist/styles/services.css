@@ -1,0 +1,240 @@
+#services .intro-section {
+  display: flex;
+  padding: 0px 64px;
+  margin-bottom: 32px;
+  padding-top: 132px;
+}
+
+#services .intro-section div:nth-child(1) {
+  min-width: 22%;
+  display: flex;
+  justify-content: center;
+}
+
+.services-primary {
+  padding: 32px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-primary h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.services-primary .tabs {
+  display: flex;
+  margin-top: 24px;
+}
+
+.services-primary .tabs .tab {
+  font-size: 24px;
+  color: var(--amdBlueSecondary);
+  margin-left: 80px;
+  cursor: pointer;
+  font-family: StingerFit;
+}
+
+.services-primary .tabs .tab:nth-child(1) {
+  margin-left: 0;
+}
+
+.services-primary .tabs .tab.active {
+  color: var(--amdPink);
+}
+
+.services-primary .tab-details {
+  margin-top: 32px;
+  justify-content: space-between;
+  display: none;
+}
+
+.services-primary .tab-details.active {
+  display: flex;
+}
+
+.services-primary .tab-details p {
+  font-size: 16px;
+}
+
+.services-primary .tab-details p:nth-child(1) {
+  color: var(--amdBlack);
+  margin-bottom: 16px;
+}
+
+.services-primary .tab-details p:nth-child(2) {
+  color: var(--amdBluePrimary);
+  margin-bottom: 8px;
+} 
+
+.services-primary .tab-details p.review {
+  color: var(--amdBluePrimary);
+  font-size: 24px;
+  font-family: StingerFit;
+  margin-top: 8px;
+}
+
+.services-primary .tab-details p.reviewer {
+  text-align: right;
+}
+
+.services-primary .tab-details > div {
+  width: 48%;
+  min-height: 330px;
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-list ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.services-primary .tab-details .tab-img {
+  background-image: url("/img/project-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mini-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 64px;
+}
+
+.mini-services h2 {
+  margin-bottom: 0;
+}
+
+.mini-services .tab-mini {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mini-services .tab-mini .vertical-tabs {
+  width: 45%;
+}
+
+.mini-services .tab-mini .vertical-tabs p {
+  font-size: 24px;
+  color: var(--amdBlueSecondary);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  font-family: StingerFit;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.mini-services .tab-mini .vertical-tabs p.active {
+  color: var(--amdPink);
+}
+
+.mini-services .tab-mini .vertical-tabs p:hover {
+  color: var(--amdPink);
+}
+
+.mini-services .tab-mini .vertical-tabs-details {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+
+ .question {
+  color: var(--amdBluePrimary);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+ .answer {
+  color: var(--amdBlack);
+  margin-bottom: 16px;
+}
+
+.enquire-btn {
+  margin-top: 16px;
+}
+
+.mini-services .tab-mini .vertical-tabs-details .vertical-tabs-details-content {
+  display: none;
+}
+
+.mini-services .tab-mini .vertical-tabs-details .vertical-tabs-details-content.active {
+  display: block;
+}
+
+#services .why-us {
+  display: none;
+  padding: 32px 24px;
+}
+
+@media (max-width: 500px) {
+  #services .why-us {
+    display: block;
+  }
+  #services .intro-section {
+    padding: 0px 24px;
+    margin-bottom: 32px;
+    padding-top: 88px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #services .intro-section p{
+    margin-top: 16px;
+  }
+  .modal-content {
+    width: 80%;
+  }
+  #services .contact-section {
+    padding: 24px;
+    padding-top: 8px;
+  }
+  .button {
+    font-size: 24px;
+  }
+
+  .modal-content .form-section {
+    padding: 64px 24px;
+  }
+  .modal-content > div {
+    width: 100%;
+  }
+  .services-primary {
+    padding: 32px 0;
+  }
+  .services-primary .tab-details.active {
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .services-primary .tab-details > div {
+    width: 100%;
+  }
+  .services-primary .tab-details div.tab-content {
+    padding: 16px 24px;
+  }
+  .services-list {
+    flex-wrap: wrap;
+  }
+  .services-primary .tabs {
+    overflow-x: scroll;
+    width: 90%;
+  }
+  .services-primary .tabs .tab {
+    margin-left: 60px;
+  }
+  .mini-services {
+    display: none;
+  }
+}

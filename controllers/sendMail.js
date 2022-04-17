@@ -34,7 +34,6 @@ async function sendMail(req, res) {
           };
           let resp = await mailWrapper(mailOptions);
           if (resp) {
-            console.log("hell Yeah");
             res.status(200).send({
               success: true
             });
