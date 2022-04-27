@@ -1,0 +1,148 @@
+#journal .intro-section {
+  display: flex;
+  padding: 0px 64px;
+  margin-bottom: 32px;
+  padding-top: 132px;
+}
+#journal .intro-section div:nth-child(1) {
+  min-width: 22%;
+  display: flex;
+  justify-content: center;
+}
+
+#journal .journal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:0px 64px;
+}
+
+#journal .journal-list .journal-item {
+  width: 48%;
+  margin-bottom: 32px;
+}
+
+.journal-item .project-image-container {
+  position: relative;
+}
+
+.journal-item .project-image-container img {
+  height: 330px;
+  object-fit: cover;
+  width: 100%;
+  /* height: calc(630px * 9 / 16); */
+}
+
+.journal-item .project-image-container .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.journal-item .project-image-container .img-hover:hover {
+  opacity: 1;
+}
+
+.journal-item .project-image-container .project-image {
+  background-image: url("/img/project-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.journal-item .project-image-container:hover .project-image{
+  background-image: url("/img/project-2.png");
+}
+
+.journal-item h3 {
+  color: var(--amdBluePrimary);
+  margin-top: 8px;
+  padding-bottom: 0px;
+}
+
+.journal-item h3 a {
+  text-decoration: none;
+}
+
+.journal-item p {
+  font-size: 16px;
+}
+
+.journal-item p a {
+  text-decoration: none;
+  color: var(--amdBlack);
+}
+
+.journal-nwl-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.journal-nwl-form h3 {
+  color: var(--amdBluePrimary);
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.journal-nwl-form p {
+  font-size: 16px;
+}
+
+.journal-nwl-form .newsletter-form {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.journal-nwl-form .newsletter-form .input-row {
+  width: 30%;
+}
+
+.journal-nwl-form .newsletter-form .input-row input {
+  margin-bottom: 0;
+}
+
+@media (max-width: 500px) {
+  #journal .intro-section {
+    padding: 0px 24px;
+    margin-bottom: 32px;
+    padding-top: 88px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #journal .intro-section p{
+    margin-top: 16px;
+  }
+  #journal .journal-list {
+    padding: 0;
+  }
+  #journal .journal-list .journal-item {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  #journal .journal-item p {
+    display: none;
+  }
+
+  #journal .journal-item h3 {
+    padding-left: 24px;
+  }
+  .journal-nwl-form {
+    padding: 24px;
+    align-items: flex-start;
+  }
+  .journal-nwl-form .newsletter-form .input-row {
+    width: 100%;
+  }
+  .journal-nwl-form .newsletter-form .input-row input {
+    margin-bottom: 32px;
+  }
+}

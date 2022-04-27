@@ -4,6 +4,7 @@ const path = require("path");
 const siteRouter = express.Router();
 const renderProjectController = require("../../controllers/renderProjectController");
 const projects = require("../../utils/projects");
+const journals = require("../../data/journal");
 
 let projectCopy = JSON.parse(JSON.stringify(projects));
 
@@ -28,6 +29,14 @@ siteRouter.get("/work", (req,res) => {
 
 siteRouter.get("/services", (req, res) => {
   res.render("services.html", {});
+});
+
+siteRouter.get("/journal", (req, res) => {
+  let journalCopy = JSON.parse(JSON.stringify(journals));
+  journalCopy = journalCopy.splice(0, 4)
+  res.render("journal.html", {
+    journals: journalCopy
+  });
 });
 
 siteRouter.get("/project/:id", renderProjectController);

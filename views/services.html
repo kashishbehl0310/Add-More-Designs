@@ -30,7 +30,7 @@
       <div class="tab active" onclick="toggleTab('branding', this)">
         Branding
       </div>
-      <div class="tab" onclick="toggleTab('website', this)">
+      <div class="tab" onclick="toggleTab('websites', this)">
         Website
       </div>
       <div class="tab" onclick="toggleTab('social-media', this)">
@@ -72,7 +72,7 @@
         <!-- <img src="/img/project-1.png" /> -->
       </div>
     </div>
-    <div class="tab-details" id="website">
+    <div class="tab-details" id="websites">
       <div class="tab-content">
         <p>
           Add More Design is a brand creation powerhouse. a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers.
@@ -401,6 +401,7 @@
       tabDetails.forEach(t => {
         t.classList.remove("active");
       });
+      console.log({ tabId: document.getElementById(tabId) });
       document.getElementById(tabId).classList.add("active");
     }
 

@@ -1,0 +1,20 @@
+<div
+  class="journal-item"
+>
+  <div class="project-image-container">
+    <a href="/journal/<%= journal.id %>">
+      <img src="/img/<%= journal.coverImage %>" />
+      <!-- <img class="img-hover" src="/img/project-2.png" /> -->
+    </a>
+  </div>
+  <h3>
+    <a href="/project/<%= journal.id %>">
+      <%= journal.title %>
+    </a>
+  </h3>
+  <p>
+    <a href="/project/<%= journal.id %>">
+      <%= journal.description %>
+    </a>
+  </p>
+</div>

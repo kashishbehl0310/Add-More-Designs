@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal | Add More Design</title>
+  <%- include("partials/styles.html") %>
+  <link href="/journal.css" rel="stylesheet">
+</head>
+<body id="journal">
+  <%- include("partials/header.html") %>
+  <section class="intro-section">
+    <div>
+      <h1>Journal</h1>
+    </div>
+    <div>
+      <p>
+        We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.
+      </p>
+    </div>
+  </section>
+  <section class="journal-list">
+    <% for (let i = 0; i < journals.length; i++) { %>
+      <%- include("partials/journalCard.html", { journal: journals[i] }) %>
+      <% } %>
+  </section>
+  <div class="load-more-container" style="display: flex; justify-content: center; padding-bottom: 32px;">
+    <button id="load-more" class="button btn-primary" >See more</button>
+  </div>
+  <section class="journal-nwl-form">
+    <h3>Don't be a stranger</h3>
+    <p>Get first dibs on new products, business updates & design tips.</p>
+    <form
+      class="newsletter-form"
+      method="POST"
+      action="send"
+      enctype="multipart/form-data"
+      style="width: 80%;"
+    >
+      <div
+        class="input-row"
+      >
+        <input
+          placeholder="Your Name & Pronouns"
+          name="name"
+          required
+          type="text"
+        />
+      </div>
+      <div
+        class="input-row"
+      >
+        <input
+          placeholder="Your Email Address"
+          name="email"
+          type="email"
+          required
+        />
+      </div>
+      <button type="submit" value="submit" class="button btn-primary welcome-btn">
+        Submit
+      </button>
+    </form>
+  </section>
+  <section
+    class="banner-section"
+  >
+    <p>
+      <span>We're a friendly bunch. stay connected with us on Instagram </span>@addmoredesign_studio</p>
+  </section>
+  <%- include("partials/footer.html") %>
+  <%- include("partials/scripts.html") %>
+  <script>
+    let index = 0;
+    document.getElementById("load-more").addEventListener("click", function() {
+      index = index + 4;
+      fetch("/api/journals?limit=4&offset=" + index)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          let journals = data.journals;
+          let html = "";
+          for (let i = 0; i < journals.length; i++) {
+            html += `
+              <div class="journal-item">
+                <div class="project-image-container">
+                  <a href="/project/${journals[i].id}">
+                    <img src="/img/${journals[i].coverImage}" />
+                    <img class="img-hover" src="/img/project-2.png" />
+                  </a>
+                </div>
+                <h3>
+                  <a href="/project/${journals[i].id}">
+                    ${journals[i].title}
+                  </a>
+                </h3>
+                <p>
+                  <a href="/project/${journals[i].id}">
+                    ${journals[i].description}
+                  </a>
+                </p>
+              </div>
+            `;
+          }
+          document.getElementsByClassName("journal-list")[0].innerHTML += html;
+          if (journals.length === 0) document.getElementsByClassName("load-more-container")[0].style.display = "none";
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    })
+  </script>
+</body>
+</html>
