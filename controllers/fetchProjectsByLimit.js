@@ -6,10 +6,10 @@ const fetchProjects = (req, res) => {
   let { limit, offset } = query;
   limit = Number(limit);
   offset = Number(offset);
-
-  const limitProjects = projectCopy.splice(offset, offset + limit - 1);
+  const limitProjects = projectCopy.slice(offset, offset + limit);
   res.status(200).send({
     projects: limitProjects,
+    hasMore: offset + limit < projectCopy.length,
     success: true
   })
 }

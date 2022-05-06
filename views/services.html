@@ -11,17 +11,24 @@
 </head>
 <body id="services">
   <%- include("partials/header.html") %>
+  <%- include("partials/repeatedBanner.html",
+    {
+      text: "We are still onboarding projects for 2022.",
+      redirectTo: '',
+      type: "secondary"
+    }
+) %>
   <section class="intro-section">
     <div>
       <h1>Services</h1>
     </div>
     <div>
       <p>
-        Add More Design is a brand creation powerhouse. a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.
+        We are a brand creation powerhouse. We believe in your business, and make sure we create a brand together that you can’t help but be obsessed with. We have services to help build a strong foundation before your brand launches and to keep growing once your brand is out there. At Add More Design, we want to help you accomplish your goals and then some more. If you want to create a stand-out brand that your audience can’t help thinking about, click the banner below! Need more convincing? Scroll through for more details!
       </p>
     </div>
   </section>
-  <%- include("partials/repeatedBanner.html", { text: "Book a consultation" }) %>
+  <%- include("partials/repeatedBanner.html", { text: "Book a consultation", redirectTo: "", type: "primary" }) %>
   <section
     class="services-primary"
   >
@@ -40,7 +47,7 @@
     <div class="tab-details active" id="branding">
       <div class="tab-content">
         <p>
-          Add More Design is a brand creation powerhouse. a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers.
+          This is where brand creation starts. For a brand rooted in strategy, we start with a discussion to best understand your brand, know the story behind it and make an action plan for the branding. Usually (re: ideally), this is followed by market research and then by crafting an identity. Successful branding is a deeply collaborative process that paves the way for how your brand looks and communicates.
         </p>
         <p>
           MAY INCLUDE :
@@ -62,90 +69,92 @@
           </ul>
         </div>
         <p class="review">
-          “Working with Kumud was a breeze! She was very fast, organized, and efficient throughout the process”
+          “Her first presentation to me on the brand and logo design was the final one, that’s how precise her understanding and work are...” 
         </p>
         <p class="reviewer">
-          -  ‘Client Name’
+          - Shivnandini (Rise Above)
         </p>
       </div>
-      <div class="tab-img">
+      <div>
+        <video src="/img/services/Branding gif.mp4" playsinline autoplay muted loop ></video>
         <!-- <img src="/img/project-1.png" /> -->
       </div>
     </div>
     <div class="tab-details" id="websites">
       <div class="tab-content">
         <p>
-          Add More Design is a brand creation powerhouse. a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers.
+          Here’s why you need a website - It’s a space that only talks about your brand, offering no distractions, and makes you look like you’ve got your shit together. While social media platforms grow and die, websites remain a sure way of promoting your brand. Since every brand has different needs, we offer custom coded websites as well as platform ones (Shopify, Squarespace, Wix - take your pick!)
         </p>
         <p>
           MAY INCLUDE :
         </p>
         <div class="services-list">
           <ul>
-            <li>Brand Strategy</li>
-            <li>Market Research</li>
-            <li>Visual Identity</li>
+            <li>Design</li>
+            <li>Development</li>
           </ul>
           <ul>
-            <li>Photography</li>
-            <li>Packaging</li>
-            <li>Stationary</li>
+            <li>Copywriting</li>
+            <li>Branded Image Templates</li>
           </ul>
           <ul>
-            <li>Branded Templates</li>
-            <li>Brand Activation</li>
+            <li>Basic SEO</li>
+            <li>Launch Support</li>
           </ul>
         </div>
         <p class="review">
-          “Working with Kumud was a breeze! She was very fast, organized, and efficient throughout the process”
+          “....Really made sure that she understood our goals before getting to work, and we were extremely pleased with the outcome.” 
         </p>
         <p class="reviewer">
-          -  ‘Client Name’
+          -  Akhil Backliwal (Career Ahead)
         </p>
       </div>
-      <div class="tab-img" style="background-image: url('/img/project-2.png');">
+      <div>
+        <video src="/img/services/Website.mp4" playsinline autoplay muted loop ></video>
         <!-- <img src="/img/project-1.png" /> -->
       </div>
     </div>
     <div class="tab-details" id="social-media">
       <div class="tab-content">
         <p>
-          Add More Design is a brand creation powerhouse. a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers.
+          Can’t live with it, can’t live without it! Social media can be overwhelming. Between keeping track of trends, scheduling, creating, engaging, it’s hard to stay sane. We want to help you build a sustainable social media game for your brand that is organic, informative and actually serves you and your audience.
         </p>
         <p>
           MAY INCLUDE :
         </p>
         <div class="services-list">
           <ul>
-            <li>Brand Strategy</li>
-            <li>Market Research</li>
-            <li>Visual Identity</li>
+            <li>Content Strategy</li>
+            <li>Design</li>
+            <li>Copywriting</li>
           </ul>
           <ul>
             <li>Photography</li>
-            <li>Packaging</li>
-            <li>Stationary</li>
+            <li>Branded Templates</li>
+            <li>Campaign Ideation</li>
           </ul>
           <ul>
-            <li>Branded Templates</li>
-            <li>Brand Activation</li>
+            <li>Surveillance</li>
+            <li>Scheduling</li>
           </ul>
         </div>
         <p class="review">
-          “Working with Kumud was a breeze! She was very fast, organized, and efficient throughout the process”
+          “One rarely comes across someone who is as creative and professional as Kumud...I have had the best time working with her on several projects.” 
         </p>
         <p class="reviewer">
-          -  ‘Client Name’
+          -  Divya Napa (DNC)
         </p>
       </div>
-      <div class="tab-img">
+      <div>
+        <video src="/img/services/SM gif.mp4" playsinline autoplay muted loop ></video>
         <!-- <img src="/img/project-1.png" /> -->
       </div>
     </div>
   </section>
-  <%- include("partials/repeatedBanner.html", { text: "Book a consultation" }) %>
+  <%- include("partials/repeatedBanner.html", { text: "Book a consultation", redirectTo: "", type: "primary" }) %>
   <section
     class="why-us"
+    style="display: none;"
   >
     <div class="heading-container">
       <h2>You should choose us.</h2>
@@ -269,7 +278,7 @@
       </div>
     </div>
   </section>
-  <section class="mini-services">
+  <section class="mini-services" style="display: none;">
     <h2>Mini Services</h2>
     <div class="tab-mini">
       <div class="vertical-tabs">
@@ -381,7 +390,7 @@
       </div>
     </div>
   </section>
-  <%- include("partials/contactForm.html", { text: "Looking for sonething else?", btnText: "Submit" }) %>
+  <%- include("partials/contactForm.html", { text: "Looking for something else?", btnText: "Submit" }) %>
   <section
     class="banner-section"
   >

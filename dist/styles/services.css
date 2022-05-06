@@ -84,6 +84,11 @@
   min-height: 330px;
 }
 
+.services-primary .tab-details > div video {
+  width: 100%;
+  height: 100%;
+}
+
 .services-list {
   display: flex;
   justify-content: space-between;

@@ -41,10 +41,35 @@
   flex-wrap: wrap;
 }
 
-#project .gallery img {
+#project .gallery .img-block {
   width: 50%;
 }
 
-#project .gallery img:nth-child(1) {
+#project .gallery .img-block img {
   width: 100%;
+  height: 100%;
+}
+
+#project .gallery .img-block:nth-child(1) {
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  #project .project-cover {
+    height: 360px;
+  }
+  #project .client-intro {
+    flex-direction: column-reverse;
+    padding: 16px 24px;
+  } 
+  #project .client-intro .client-description {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  #project .client-intro .client-details {
+    width: 100%;
+  }
+  #project .gallery img {
+    width: 100%;
+  }
 }

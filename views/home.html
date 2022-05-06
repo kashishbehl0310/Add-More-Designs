@@ -12,6 +12,13 @@
   <body>
     <!-- Intro Section -->
     <%- include("partials/header.html") %>
+    <%- include("partials/repeatedBanner.html",
+      {
+        text: "We are still onboarding projects for 2022.",
+        redirectTo: '',
+        type: "secondary"
+      }
+    ) %>
     <section
       class="flex-container"
     >
@@ -22,7 +29,7 @@
         <h1 style="color: var(--amdBlack); margin-bottom: 16px;">
           A woman-led design studio that offers brand building services to empower dreamers, risk-takers, ambitious entrepreneurs, and resolute brands ready to change the world.<br><br>Based in India. Working globally.
         </h1>
-        <a class="button btn-primary">
+        <a href="/services" class="button btn-primary">
           See More
         </a>
       </div>
@@ -34,7 +41,7 @@
         <h2>
           Our Services
         </h2>
-        <a class="button btn-primary">
+        <a class="button btn-primary modal-trigger-btn">
           Hire Us
         </a>
       </div>
@@ -73,9 +80,15 @@
       </div>
 
     </section>
-    <%- include("partials/projects.html"),  { projects: projects } %>
+    <%- include("partials/projects.html", { projects: projects, seeMore: "false" }) %>
     
-    <%- include("partials/repeatedBanner.html", { text: "See all our work" }) %>
+    <%- include("partials/repeatedBanner.html",
+      {
+        text: "See all our work",
+        redirectTo: '/work',
+        type: "primary"
+      }
+    ) %>
     <section
       class="testimonials"
     >
@@ -150,7 +163,7 @@
         </div>
       </div> -->
     </section>
-    <%- include("partials/repeatedBanner.html", { text: "See all our work" }) %>
+    <%- include("partials/repeatedBanner.html", { text: "See all our work", redirectTo: '/work',  type: "primary" }) %>
     <section
       id="hire-form"
     >

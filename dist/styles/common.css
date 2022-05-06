@@ -138,6 +138,17 @@ input {
   border: none;
 }
 
+.btn-primary {
+  text-decoration: none;
+}
+
+.btn-secondary {
+  font-family: GeneralSansRegular;
+  color: var(--amdBlack);
+  font-size: 16px;
+  text-decoration: none;
+}
+
 .button::after {
   content: "";
   width: 128%;
@@ -152,7 +163,13 @@ input {
 
 .button:hover:after {
   height: 32px;
-  
+}
+
+.button.btn-secondary::after {
+  content: "";
+  height: 2px;
+  width: 200%;
+  left: -20px;
 }
 
 .header {
@@ -162,6 +179,8 @@ input {
   justify-content: flex-end;
   z-index: 9;
   padding: 32px 64px;
+  width: fit-content;
+  right: 0;
 }
 
 .header img {
@@ -173,7 +192,7 @@ input {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 99;
   background: var(--amdBluePrimary);
   width: 30%;
   box-shadow: 2px 0 4px rgba(0,0,0,0.5);
@@ -376,6 +395,12 @@ input {
 .row-banner {
   background-color: var(--amdGreen);
   padding: 16px 0px;
+  cursor: pointer;
+}
+
+.row-banner.secondary {
+  background-color: var(--amdBlueSecondary);
+  cursor: default;
 }
 
 .marquee{
@@ -397,7 +422,7 @@ input {
   display: flex;
   position: relative;
   transform: translate3d(var(--move-initial),0,0);
-  animation: marquee 5s linear infinite;
+  animation: marquee 15s linear infinite;
   /* // animation-play-state: paused; */
 }
 
@@ -697,6 +722,10 @@ input {
   padding: 32px 0px;
 }
 
+.padding-top-zero {
+  padding-top: 0;
+}
+
 .contact-section p {
   font-size: 32px;
   color: var(--amdBluePrimary);
@@ -800,6 +829,48 @@ input {
 
 #subscribe.modal .right-section ul li {
   font-size: 16px;
+}
+
+.journal-nwl-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.journal-nwl-form h3 {
+  color: var(--amdBluePrimary);
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.journal-nwl-form p {
+  font-size: 16px;
+}
+
+.journal-nwl-form .newsletter-form {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.journal-nwl-form .newsletter-form .input-row {
+  width: 30%;
+}
+
+.journal-nwl-form .newsletter-form .input-row input {
+  margin-bottom: 0;
+}
+
+.carousel-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 64px;
+  align-items: flex-start;
 }
 
 @media (max-width: 500px) {
@@ -1017,5 +1088,21 @@ input {
   }
   .modal-content > div {
     width: 100%;
+  }
+  .journal-nwl-form {
+    padding: 24px;
+    align-items: flex-start;
+  }
+  .journal-nwl-form .newsletter-form .input-row {
+    width: 100%;
+  }
+  .journal-nwl-form .newsletter-form .input-row input {
+    margin-bottom: 32px;
+  }
+  .carousel-controls {
+    padding: 16px 24px;
+  }
+  .carousel-controls a {
+    font-size: 16px;
   }
 }

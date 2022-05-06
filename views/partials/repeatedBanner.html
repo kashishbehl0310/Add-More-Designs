@@ -1,6 +1,19 @@
-<section class="row-banner">
-  <div class="marquee">
+<section class="row-banner <%= type %>">
+  <div
+    onclick="
+    <% if(redirectTo && type === 'primary') { %>
+      window.location.href = '<%= redirectTo %>';
+    <% } %>
+    "
+    class="marquee <% if (!redirectTo) { %> modal-trigger-btn <% } %>">
     <div class="marquee__inner" aria-hidden="true">
+      <span>  <%= text %>&nbsp; |&nbsp; </span>
+      <span>  <%= text %>&nbsp; |&nbsp; </span>
+      <span>  <%= text %>&nbsp; |&nbsp; </span>
+      <span>  <%= text %>&nbsp; |&nbsp; </span>
+      <span>  <%= text %>&nbsp; |&nbsp; </span>
+      <span>  <%= text %>&nbsp; |&nbsp; </span>
+      <span>  <%= text %>&nbsp; |&nbsp; </span>
       <span>  <%= text %>&nbsp; |&nbsp; </span>
       <span>  <%= text %>&nbsp; |&nbsp; </span>
       <span>  <%= text %>&nbsp; |&nbsp; </span>

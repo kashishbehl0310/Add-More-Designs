@@ -75,39 +75,6 @@
   color: var(--amdBlack);
 }
 
-.journal-nwl-form {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 32px;
-}
-
-.journal-nwl-form h3 {
-  color: var(--amdBluePrimary);
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
-.journal-nwl-form p {
-  font-size: 16px;
-}
-
-.journal-nwl-form .newsletter-form {
-  display: flex;
-  margin-top: 16px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.journal-nwl-form .newsletter-form .input-row {
-  width: 30%;
-}
-
-.journal-nwl-form .newsletter-form .input-row input {
-  margin-bottom: 0;
-}
 
 @media (max-width: 500px) {
   #journal .intro-section {
@@ -135,14 +102,5 @@
   #journal .journal-item h3 {
     padding-left: 24px;
   }
-  .journal-nwl-form {
-    padding: 24px;
-    align-items: flex-start;
-  }
-  .journal-nwl-form .newsletter-form .input-row {
-    width: 100%;
-  }
-  .journal-nwl-form .newsletter-form .input-row input {
-    margin-bottom: 32px;
-  }
+  
 }

@@ -12,7 +12,7 @@
   <body id="project">
     <!-- Intro Section -->
     <%- include("partials/header.html") %>
-    <%- include("partials/repeatedBanner.html", { text: "We are still onboarding projects for 2022." }) %>
+    <%- include("partials/repeatedBanner.html", { text: "We are still onboarding projects for 2022.", redirectTo: "", type: "secondary" }) %>
     <section
       class="project-cover"
     >
@@ -54,15 +54,33 @@
     </section>
     <section class="gallery">
       <% for(var i = 0; i < data.gallery.length; i++) { %>
-        <img src="/img/<%= data.gallery[i] %>" />
+        <div class="img-block">
+          <% if(data.gallery[i].includes(".mp4")) { %>
+            <video
+              src="/img<%= data.gallery[i] %>"
+              loop
+              muted
+              autoplay
+              playsinline
+              style="width: 100%; height: 100%;"
+            />
+          <% } else { %>
+            <img src="/img/<%= data.gallery[i] %>" />
+          <% } %>
+        </div>
       <% } %>
       
     </section>
-    <div style="width: 100%; display: flex; justify-content: space-between; padding: 32px 64px;">
-      <a style="visibility: <% if(data.prev) { %> visible; <% } else { %>hidden;<% } %>" href="<%= data.prev %>" class="button btn-primary">Prev</a>
-      <a style="visibility: <% if(data.next) { %> visible; <% } else { %>hidden;<% } %>"  href="<%= data.next %>" class="button btn-primary">Next</a>
+    <div class="carousel-controls">
+      <a style="visibility: <% if(data.prev) { %> visible; <% } else { %>hidden;<% } %>" href="<%= data.prev %>" class="button btn-secondary">Prev</a>
+      <div class="hide-xs">
+        <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>
+      </div>
+      <a style="visibility: <% if(data.next) { %> visible; <% } else { %>hidden;<% } %>"  href="<%= data.next %>" class="button btn-secondary">Next</a>
     </div>
-    <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>
+    <div class="hide-lg">
+      <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>
+    </div>
     <section
       class="banner-section"
     >

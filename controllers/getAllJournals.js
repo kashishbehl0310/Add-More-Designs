@@ -7,9 +7,10 @@ const getAllJournals = (req, res) => {
   limit = Number(limit);
   offset = Number(offset);
 
-  const limitJournal = journalCopy.splice(offset, offset + limit - 1);
+  const limitJournal = journalCopy.slice(offset, offset + limit);
   res.status(200).send({
     journals: limitJournal,
+    hasMore: offset + limit < journalCopy.length,
     success: true
   })
 };

@@ -16,7 +16,7 @@
     </div>
     <div>
       <p>
-        We're Add More Design, a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason of why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent gets us to strategy-which helps make us provide better design services.
+        We have ideas, and sometimes we right them here. Our journal is a mishmash of dreams, observations, rants, learnings, resources, and whatever else that pops in our heads. This is an insight into who we are as a creative team and an effort in turning Add More Design into a community. Do sign up here to receive an email whenever we write something new. Replying and sharing your opinions is always encouraged 😊
       </p>
     </div>
   </section>
@@ -25,9 +25,9 @@
       <%- include("partials/journalCard.html", { journal: journals[i] }) %>
       <% } %>
   </section>
-  <div class="load-more-container" style="display: flex; justify-content: center; padding-bottom: 32px;">
+  <!-- <div class="load-more-container" style="display: flex; justify-content: center; padding-bottom: 32px;">
     <button id="load-more" class="button btn-primary" >See more</button>
-  </div>
+  </div> -->
   <section class="journal-nwl-form">
     <h3>Don't be a stranger</h3>
     <p>Get first dibs on new products, business updates & design tips.</p>
@@ -105,7 +105,7 @@
             `;
           }
           document.getElementsByClassName("journal-list")[0].innerHTML += html;
-          if (journals.length === 0) document.getElementsByClassName("load-more-container")[0].style.display = "none";
+          if (!data.hasMore) document.getElementsByClassName("load-more-container")[0].style.display = "none";
         })
         .catch((err) => {
           console.log(err);

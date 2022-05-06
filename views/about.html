@@ -10,6 +10,13 @@
 </head>
 <body id="about">
   <%- include("partials/header.html") %>
+  <%- include("partials/repeatedBanner.html",
+      {
+        text: "We are still onboarding projects for 2022.",
+        redirectTo: '',
+        type: "secondary"
+      }
+  ) %>
   <section
    class="about-intro" 
   >
@@ -21,13 +28,13 @@
         <p>
           We're a woman-led design studio for ambitious, purposeful brands❣️ Everything we create is led by intention, strategy, and a whole lot of love. Here, we literally 'add more design' to help you reach your goals, to help your consumers make their lives better, to (hopefully) make the world better☀️ For us, the reason why we're creating something is very important. We love working with people who are wired like that as well. We believe that reason and intent get us to strategy-which helps make us provide better design services.
         </p>
-        <a class="button btn-primary">
+        <a class="button btn-primary modal-trigger-btn">
           Hire Us
         </a>
       </div>
     </div>
   </section>
-  <%- include("partials/repeatedBanner.html", { text: "Book a consulatation" }) %>
+  <%- include("partials/repeatedBanner.html", { text: "Book a consulatation", redirectTo: "", type: "primary" }) %>
   <section
     class="why-us"
   >
@@ -61,7 +68,7 @@
       </div>
     </div>
   </section>
-  <%- include("partials/repeatedBanner.html", { text: "Book a consulatation" }) %>
+  <%- include("partials/repeatedBanner.html", { text: "Book a consulatation", redirectTo: "", type: "primary" }) %>
   <section class="book-section">
     <div>
       <h2>We'll make a great team.</h2>

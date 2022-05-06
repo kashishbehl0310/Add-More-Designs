@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal | Add More Design</title>
+  <%- include("partials/styles.html") %>
+  <link href="/post.css" rel="stylesheet">
+
+</head>
+<body id="post">
+  <%- include("partials/header.html") %>
+  <section class="intro-section">
+    <div>
+      <p>
+        <span>Published on</span>
+        <%= post.publishedOn %>
+      </p>
+      <p>
+        <span>Written By</span>
+        <%= post.author %>
+      </p>
+    </div>
+    <div>
+      <h1>
+        <%= post.title %>
+      </h1>
+      <p class="hide-xs">
+        <%= post.sections[0].para %>
+      </p>
+    </div>
+  </section>
+  <section class="post-cover">
+    <div style="background-image: url('/img/<%= post.coverImage %>')"></div>
+  </section>
+
+  <p class="hide-lg">
+    <%= post.sections[0].para %>
+  </p>
+  <section class="post-subtitle">
+    <% for (let i = 0; i < post.sections.length; i++) { %>
+      <% if (i !== 0) { %>
+        <div>
+          <div class="subtitle-text">
+            <h3>
+              <%= post.sections[i].heading %>
+            </h3>
+            <p>
+              <%= post.sections[i].para.replace('\n\n', '\n\n\n') %>
+            </p>
+          </div>
+          <div>
+            <% if (post.sections[i].gallery) { %>
+              <% for (let j = 0; j < post.sections[i].gallery.length; j++) { %>
+                <img class="gallery-img" src="/img/<%= post.sections[i].gallery[j] %>" alt="<%= post.sections[i].gallery[j] %>" />
+              <% } %>
+            <% } %>
+          </div>
+        </div>
+      <% } %>
+    <% } %>
+  </section>
+  <!-- <div style="width: 100%; display: flex; justify-content: space-between; padding: 32px 64px;">
+    <a style="visibility: <% if(post.prev) { %> visible; <% } else { %>hidden;<% } %>" href="<%= post.prev %>" class="button btn-secondary">Prev</a>
+    <a style="visibility: <% if(post.next) { %> visible; <% } else { %>hidden;<% } %>"  href="<%= post.next %>" class="button btn-secondary">Next</a>
+  </div> -->
+  <section class="journal-nwl-form">
+    <h3>Don't be a stranger</h3>
+    <p>Get first dibs on new products, business updates & design tips.</p>
+    <form
+      class="newsletter-form"
+      method="POST"
+      action="send"
+      enctype="multipart/form-data"
+      style="width: 80%;"
+    >
+      <div
+        class="input-row"
+      >
+        <input
+          placeholder="Your Name & Pronouns"
+          name="name"
+          required
+          type="text"
+        />
+      </div>
+      <div
+        class="input-row"
+      >
+        <input
+          placeholder="Your Email Address"
+          name="email"
+          type="email"
+          required
+        />
+      </div>
+      <button type="submit" value="submit" class="button btn-primary welcome-btn">
+        Submit
+      </button>
+    </form>
+  </section>
+  
+  <section
+      class="banner-section"
+    >
+      <p>
+        <span>We're a friendly bunch. stay connected with us on Instagram </span>@addmoredesign_studio</p>
+    </section>
+  <%- include("partials/footer.html") %>
+  <%- include("partials/scripts.html") %>
+</body>
+</html>

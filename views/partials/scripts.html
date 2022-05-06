@@ -39,9 +39,38 @@
 
   // open subscribe to newsletter modal after 5s
   var subcribeModal = document.getElementById("subscribe");
-  setTimeout(function() {
-    subcribeModal.style.display = "block";
-  }, 2000);
+
+  // utility function to get cookie by name
+  function getCookie(name) {
+    let cookie = {};
+    document.cookie.split(';').forEach(function(el) {
+      let [k,v] = el.split('=');
+      cookie[k.trim()] = v;
+    })
+    return cookie[name];
+  }
+
+  // create cookie for n number of days
+  function createCookie(name, value, days) {
+    var date, expires;
+    if (days) {
+        date = new Date();
+        date.setDate(date.getDate()+days);
+        expires = "; expires="+date.toUTCString();
+    } else {
+        expires = "";
+    }
+    document.cookie = name+"="+value+expires+"; path=/";
+  }
+
+  const modalSeen = getCookie("modalSeen");
+
+  if (!modalSeen) {
+    setTimeout(function() {
+      subcribeModal.style.display = "block";
+      createCookie("modalSeen", true, 10);
+    }, 5000);
+  }
 
     // close modal on click outside
     window.onclick = function(e) {
@@ -52,6 +81,7 @@
     if (e.target === subcribeModal) {
       subcribeModal.style.display = "none";
     }
+    // document.getElementById("sidebar").classList.toggle("collapsed");
   }
 
   // send contact form data

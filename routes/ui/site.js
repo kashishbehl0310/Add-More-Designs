@@ -5,6 +5,7 @@ const siteRouter = express.Router();
 const renderProjectController = require("../../controllers/renderProjectController");
 const projects = require("../../utils/projects");
 const journals = require("../../data/journal");
+const fetchPostById = require("../../controllers/fetchPostById");
 
 let projectCopy = JSON.parse(JSON.stringify(projects));
 
@@ -40,6 +41,8 @@ siteRouter.get("/journal", (req, res) => {
 });
 
 siteRouter.get("/project/:id", renderProjectController);
+
+siteRouter.get("/journal/:id", fetchPostById)
 
 module.exports = siteRouter;
 
