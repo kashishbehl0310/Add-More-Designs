@@ -177,7 +177,7 @@ input {
   position: fixed;
   display: flex;
   justify-content: flex-end;
-  z-index: 9;
+  z-index: 100;
   padding: 32px 64px;
   width: fit-content;
   right: 0;
