@@ -1,0 +1,9 @@
+runtime: nodejs8
+env: flex
+env_variables:
+  NODEMAILER_EMAIL: "kashishbehl36@gmail.com"
+  NODEMAILER_PASS: "jtjggbrmcpwxbdif"
+  NODE_ENV: "development"
+  HEROKU_APP_EMAIL: "addmoredesign.studio@gmail.com"
+  HEROKU_APP_PASSWORD: "nbhbhgh123#"
+  PORT: "5000"
