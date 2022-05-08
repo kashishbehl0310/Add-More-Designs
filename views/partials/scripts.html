@@ -84,6 +84,17 @@
     // document.getElementById("sidebar").classList.toggle("collapsed");
   }
 
+  // fallback method for ios to close modal on click outside
+  window.ontouchstart = function(e) {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+
+    if (e.target === subcribeModal) {
+      subcribeModal.style.display = "none";
+    }
+  }
+
   // send contact form data
   const sendDetails = (mail) => {
     fetch("/api/save-details", {
