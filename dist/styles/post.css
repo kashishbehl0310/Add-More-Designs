@@ -49,13 +49,19 @@
   margin-bottom: 16px;
 }
 
+#post .post-subtitle .gallery {
+  display: flex;
+  justify-content: center;
+}
+
 #post .post-subtitle .gallery-img {
   width: 464px;
   margin-bottom: 16px;
+  margin-right: 64px;
 }
 
-#post .post-subtitle .gallery-img:nth-child(1) {
-  margin-right: 64px;
+#post .post-subtitle .gallery-img:nth-last-child(1) {
+  margin-right: 0;
 }
 
 @media (max-width: 500px) {

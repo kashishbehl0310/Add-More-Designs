@@ -1,5 +1,34 @@
 const projects = [
   {
+    id: "career-ahead",
+    name: "Career Ahead",
+    clientDetails: {
+      name: "Career Ahead",
+      year: "2020",
+      services: ["Magazine Design", "Layout Design"]
+    },
+    intro: "Editorial design for a magazine that is a treasure trove of learnings for students and professionals.",
+    heading: "Editorial design for a magazine that is a treasure trove of learnings for students and professionals.",
+    description: "Career Ahead is a quarterly magazine that offers a view into the real-life experiences of accomplished individuals from all areas as well as first-hand insights into student life along with career tips, inspiration, and relevant news for young people and professionals. We were tasked with designing many of their 2021 issues.",
+    coverImage: "/projects/career-ahead/Custom Size – 32.jpg",
+    thumbnails: [
+      "/projects/career-ahead/Custom Size – 30.jpg",
+      "/projects/career-ahead/Custom Size – 31.jpg",
+    ],
+    gallery: [
+      "/projects/career-ahead/Custom Size – 33.jpg",
+      "/projects/career-ahead/Custom Size – 34.jpg",
+      "/projects/career-ahead/Custom Size – 35.jpg",
+      "/projects/career-ahead/Custom Size – 36.jpg",
+      "/projects/career-ahead/Custom Size – 37.jpg",
+    ],
+    socialMedia: {
+      insta: "",
+      fb: ""
+    },
+    prev: "/project/attitude-makeover"
+  }, 
+  {
     id: "attitude-makeover",
     name: "Attitude Makeover",
     clientDetails: {
@@ -26,8 +55,42 @@ const projects = [
       insta: "",
       fb: ""
     },
-    next: "/project/neck-up",
+    next: "/project/career-ahead",
     prev: "/project/interweave-consulting"
+  },
+  {
+    id: "interweave-consulting",
+    name: "Interweave Consulting",
+    clientDetails: {
+      name: "Interweave Consulting",
+      year: "2020",
+      services: ["Social Media Design", "Emailer Design", "Web Collateral"]
+    },
+    intro: "Visual collateral for a conference speakers from all over the globe teaching us the how-to’s of creating a truly inclusive workspace. ",
+    heading: "Visual collateral for a conference speakers from all over the globe teaching us the how-to’s of creating a truly inclusive workspace. ",
+    description: `
+      Interweave Consulting is a professional diversity consulting organization that introduced corporate India to the opportunities of diversity and created a space and value for D&I discussions.
+
+      We worked with them for their yearly flagship event #InclusionNow.
+    `,
+    coverImage: "/projects/interweave/Custom Size – 18.jpg",
+    thumbnails: [
+      "/projects/interweave/Custom Size – 15.jpg",
+      "/projects/interweave/Custom Size – 16.jpg",
+    ],
+    gallery: [
+      "/projects/interweave/Custom Size – 22.jpg",
+      "/projects/interweave/Custom Size – 17.jpg",
+      "/projects/interweave/Custom Size – 19.jpg",
+      "/projects/interweave/Custom Size – 20.jpg",
+      "/projects/interweave/Custom Size – 21.jpg",
+    ],
+    socialMedia: {
+      insta: "",
+      fb: ""
+    },
+    next: "/project/attitude-makeover",
+    prev: "/project/flex-for-good"
   },
   {
     id: "flex-for-good",
@@ -55,42 +118,9 @@ const projects = [
       fb: ""
     },
     next: "/project/interweave-consulting",
-    prev: "/project/career-ahead"
+    prev: "/project/neck-up"
   },
-  {
-    id: "interweave-consulting",
-    name: "Interweave Consulting",
-    clientDetails: {
-      name: "Interweave Consulting",
-      year: "2020",
-      services: ["Social Media Design", "Emailer Design", "Web Collateral"]
-    },
-    intro: "Visual collateral for a conference speakers from all over the globe teaching us the how-to’s of creating a truly inclusive workspace. ",
-    heading: "Visual collateral for a conference speakers from all over the globe teaching us the how-to’s of creating a truly inclusive workspace. ",
-    description: `
-      Interweave Consulting is a professional diversity consulting organization that introduced corporate India to the opportunities of diversity and created a space and value for D&I discussions.
 
-      We worked with them for their yearly flagship event #InclusionNow.
-    `,
-    coverImage: "/projects/interweave/Custom Size – 18.jpg",
-    thumbnails: [
-      "/projects/interweave/Custom Size – 15.jpg",
-      "/projects/interweave/Custom Size – 16.jpg",
-    ],
-    gallery: [
-      "/projects/interweave/Custom Size – 17.jpg",
-      "/projects/interweave/Custom Size – 19.jpg",
-      "/projects/interweave/Custom Size – 20.jpg",
-      "/projects/interweave/Custom Size – 21.jpg",
-      "/projects/interweave/Custom Size – 22.jpg",
-    ],
-    socialMedia: {
-      insta: "",
-      fb: ""
-    },
-    next: "/project/attitude-makeover",
-    prev: "/project/flex-for-good"
-  },
   {
     id: "neck-up",
     name: "Neck Up",
@@ -117,38 +147,9 @@ const projects = [
       insta: "",
       fb: ""
     },
-    next: "/project/bolly-coin",
-    prev: "/project/attitude-makeover"
-  },
-  {
-    id: "career-ahead",
-    name: "Career Ahead",
-    clientDetails: {
-      name: "Career Ahead",
-      year: "2020",
-      services: ["Magazine Design", "Layout Design"]
-    },
-    intro: "Editorial design for a magazine that is a treasure trove of learnings for students and professionals.",
-    heading: "Editorial design for a magazine that is a treasure trove of learnings for students and professionals.",
-    description: "Career Ahead is a quarterly magazine that offers a view into the real-life experiences of accomplished individuals from all areas as well as first-hand insights into student life along with career tips, inspiration, and relevant news for young people and professionals. We were tasked with designing many of their 2021 issues.",
-    coverImage: "/projects/career-ahead/Custom Size – 32.jpg",
-    thumbnails: [
-      "/projects/career-ahead/Custom Size – 30.jpg",
-      "/projects/career-ahead/Custom Size – 31.jpg",
-    ],
-    gallery: [
-      "/projects/career-ahead/Custom Size – 33.jpg",
-      "/projects/career-ahead/Custom Size – 34.jpg",
-      "/projects/career-ahead/Custom Size – 35.jpg",
-      "/projects/career-ahead/Custom Size – 36.jpg",
-      "/projects/career-ahead/Custom Size – 37.jpg",
-    ],
-    socialMedia: {
-      insta: "",
-      fb: ""
-    },
+    prev: "/project/bolly-coin",
     next: "/project/flex-for-good"
-  }, 
+  },
   {
     id: "bolly-coin",
     name: "BollyCoin",
@@ -166,18 +167,18 @@ const projects = [
       "/projects/bolly-coin/Custom Size – 39.jpg",
     ],
     gallery: [
+      "/projects/bolly-coin/Custom Size – 45.jpg",
       "/projects/bolly-coin/Custom Size – 41.jpg",
       "/projects/bolly-coin/Custom Size – 42.jpg",
       "/projects/bolly-coin/Custom Size – 43.jpg",
       "/projects/bolly-coin/Custom Size – 44.jpg",
-      "/projects/bolly-coin/Custom Size – 45.jpg",
     ],
     socialMedia: {
       insta: "",
       fb: ""
     },
-    next: "/project/dnc",
-    prev: "/project/neck-up"
+    prev: "/project/dnc",
+    next: "/project/neck-up"
   },
   {
     id: "dnc",
@@ -196,18 +197,18 @@ const projects = [
       "/projects/dnc/Custom Size – 51.jpg",
     ],
     gallery: [
-      "/projects/dnc/Custom Size – 48.jpg",
-      "/projects/dnc/Custom Size – 49_1.mp4",
       "/projects/dnc/Custom Size – 50.jpg",
+      "/projects/dnc/Custom Size – 48.jpg",
       "/projects/dnc/Custom Size – 52.jpg",
+      "/projects/dnc/Custom Size – 49_1.mp4",
       "/projects/dnc/Custom Size – 53_1.mp4",
     ],
     socialMedia: {
       insta: "",
       fb: ""
     },
-    next: "/project/sundaze",
-    prev: "/project/bolly-coin"
+    prev: "/project/sundaze",
+    next: "/project/bolly-coin"
   },
   {
     id: "sundaze",
@@ -238,7 +239,7 @@ const projects = [
       fb: ""
     },
     // next: "/project/dear-klairs",
-    prev: "/project/dnc"
+    next: "/project/dnc"
   },
   // {
   //   id: "dear-klairs",

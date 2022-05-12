@@ -172,8 +172,11 @@ input {
 .button.btn-secondary::after {
   content: "";
   height: 2px;
-  width: 200%;
+  width: 150%;
   left: -20px;
+}
+.button.btn-secondary.pagination-btn::after {
+  width: 200%;
 }
 
 .header {

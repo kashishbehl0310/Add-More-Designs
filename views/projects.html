@@ -72,11 +72,11 @@
       
     </section>
     <div class="carousel-controls">
-      <a style="visibility: <% if(data.prev) { %> visible; <% } else { %>hidden;<% } %>" href="<%= data.prev %>" class="button btn-secondary">Prev</a>
+      <a style="visibility: <% if(data.prev) { %> visible; <% } else { %>hidden;<% } %>" href="<%= data.prev %>" class="button btn-secondary pagination-btn">Prev</a>
       <div class="hide-xs">
         <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>
       </div>
-      <a style="visibility: <% if(data.next) { %> visible; <% } else { %>hidden;<% } %>"  href="<%= data.next %>" class="button btn-secondary">Next</a>
+      <a style="visibility: <% if(data.next) { %> visible; <% } else { %>hidden;<% } %>"  href="<%= data.next %>" class="button btn-secondary pagination-btn">Next</a>
     </div>
     <div class="hide-lg">
       <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>

@@ -16,7 +16,7 @@ const jourmal = [
         \n\n
         We work with people regardless of who they are as long as they try to be inclusive and believe in doing better. We make it a case to keep our strategy, communication, and design while building brands unless differentiation is somehow necessary to make a point.
         `,
-        gallery: ["/blog/Blog 1_1.jpg", "/blog/Blog 1_2.jpg"]
+        gallery: ["/blog/Blog 1_2.jpg"]
       },
       {
         heading: "Empowerment",
