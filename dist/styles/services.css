@@ -81,7 +81,7 @@
 
 .services-primary .tab-details > div {
   width: 48%;
-  min-height: 330px;
+  /* min-height: 330px; */
 }
 
 .services-primary .tab-details > div video {
@@ -94,6 +94,10 @@
   justify-content: space-between;
 }
 
+.services-list.hide-lg{
+  display: none;
+}
+
 .services-list ul {
   list-style-type: none;
   padding: 0;
@@ -103,6 +107,7 @@
 .services-list ul li {
   font-size: 16px;
   margin-bottom: 8px;
+  font-family: GeneralSansRegular;
 }
 
 .services-primary .tab-details .tab-img {
@@ -237,9 +242,18 @@
     width: 90%;
   }
   .services-primary .tabs .tab {
-    margin-left: 60px;
+    margin-left: 50px;
   }
   .mini-services {
     display: none;
+  }
+  .services-primary .tabs .tab {
+    font-size: 20px;
+  }
+  .services-list.hide-xs {
+    display: none;
+  }
+  .services-list.hide-lg{
+    display: flex;
   }
 }

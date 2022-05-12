@@ -11,6 +11,13 @@
 </head>
 <body id="post">
   <%- include("partials/header.html") %>
+  <%- include("partials/repeatedBanner.html",
+    {
+      text: "We are still onboarding projects for 2022.",
+      redirectTo: '',
+      type: "secondary"
+    }
+) %>
   <section class="intro-section">
     <div>
       <p>
@@ -73,7 +80,6 @@
       method="POST"
       action="send"
       enctype="multipart/form-data"
-      style="width: 80%;"
     >
       <div
         class="input-row"

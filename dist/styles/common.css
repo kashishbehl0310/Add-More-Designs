@@ -114,6 +114,10 @@ input {
   max-width: 50%;
 }
 
+.flex-container > div video {
+  width: 100%;
+}
+
 .flex-container div:nth-child(1) img {
   width: 100%;
 }
@@ -178,7 +182,7 @@ input {
   display: flex;
   justify-content: flex-end;
   z-index: 100;
-  padding: 32px 64px;
+  padding: 64px;
   width: fit-content;
   right: 0;
 }
@@ -421,8 +425,9 @@ input {
   width: fit-content;
   display: flex;
   position: relative;
+  text-transform: uppercase;
   transform: translate3d(var(--move-initial),0,0);
-  animation: marquee 15s linear infinite;
+  animation: marquee 30s linear infinite;
   /* // animation-play-state: paused; */
 }
 
@@ -586,7 +591,7 @@ input {
   width: 100%;
 }
 
-.input-row input {
+.input-row input, .input-row textarea {
   outline: 0;
   border-width: 0 0 2px;
   border-color: var(--amdBlueSecondary);
@@ -594,10 +599,15 @@ input {
   margin-bottom: 32px;
 }
 
+.input-row textarea {
+  resize: none;
+}
+
+
 #hire-form > div:nth-child(2) .input-row:nth-child(1) input {
   width: 45%;
 }
-.input-row input::placeholder {
+.input-row input::placeholder, .input-row textarea::placeholder {
   font-size: 16px;
   font-family: StingerFit;
   color: var(--amdBlack);
@@ -694,7 +704,7 @@ input {
 }
 
 .footer .footer-container .button {
-  z-index: 10;
+  z-index: 0;
 }
 
 .footer .icon-list {
@@ -737,7 +747,6 @@ input {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -745,6 +754,7 @@ input {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  
 }
 
 /* Modal Content */
@@ -754,6 +764,9 @@ input {
   width: 60%;
   display: flex;
   justify-content: center;
+  top: 50%;
+  transform: translate(0%, 10%);
+  
 }
 
 .modal-content > div {
@@ -855,6 +868,7 @@ input {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  width: 50%;
 }
 
 .journal-nwl-form .newsletter-form .input-row {
@@ -899,7 +913,7 @@ input {
     display: none;
   }
   .header {
-    padding: 32px;
+    padding: 64px 32px;
   }
   .header img {
     width: 42px;
@@ -1074,6 +1088,7 @@ input {
 
   .modal-content {
     width: 80%;
+    transform: translate(0%, 22%);
   }
   .contact-section {
     padding: 24px;
@@ -1105,4 +1120,11 @@ input {
   .carousel-controls a {
     font-size: 16px;
   }
+  .journal-nwl-form .newsletter-form {
+    width: 100%;
+  }
+}
+
+video {
+  clip-path: inset(1px 1px);
 }

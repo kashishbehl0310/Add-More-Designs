@@ -24,11 +24,12 @@
       </div>
       <div>
         <p>
-          Welcome to our work showcase. Here we share some of the recent work that we’ve done i.e. the recent work that we remembered to upload 😅 Anyway, take a scroll and feast your eyes. We offer branding, visual direction, packaging, social media marketing, website design, and more (phew!) More projects launching soon! Like what you see? Hire us!
+          Welcome to our work showcase. Here we share some of the recent work that we’ve done i.e. the recent work that we remembered to upload 😅 Anyway, take a scroll and feast your eyes. We offer branding, visual direction, packaging, social media marketing, website design, and more (phew!) More projects launching soon! Like what you see? <a style="color: var(--amdBluePrimary); cursor: pointer;" class="modal-trigger-btn">Hire us!</a>
         </p>
       </div>
     </section>
     <%- include("partials/projects.html", { projects: projects, seeMore: "true" }) %>
+    <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>
     <%- include("partials/instaFeed.html") %>
     <section
       class="banner-section"
@@ -36,7 +37,7 @@
       <p>
         <span>We're a friendly bunch. stay connected with us on Instagram </span>@addmoredesign_studio</p>
     </section>
-    <%- include("partials/contactForm.html", { text: "", btnText: "" }) %>
+    
     <%- include("partials/footer.html") %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     

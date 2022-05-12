@@ -6,8 +6,8 @@
       <div class="project-item">
         <div class="project-image-container">
           <a href="/project/<%= projects[i].id %>">
-            <img src="/img/<%= projects[i].coverImage %>" />
-            <img class="img-hover" src="/img/<%= projects[i].gallery[0] %>" />
+            <img src="/img/<%= projects[i].thumbnails[0] %>" />
+            <img class="img-hover" src="/img/<%= projects[i].thumbnails[1] %>" />
           </a>
         </div>
         <h3>
@@ -48,8 +48,8 @@
             <div class="project-item">
               <div class="project-image-container">
                 <a href="/project/${projects[i].id}">
-                  <img src="/img/${projects[i].coverImage}" />
-                  <img class="img-hover" src="/img/${projects[i].gallery[0]}" />
+                  <img src="/img/${projects[i].thumbnails[0]}" />
+                  <img class="img-hover" src="/img/${projects[i].thumbnails[1]}" />
                 </a>
               </div>
               <h3>

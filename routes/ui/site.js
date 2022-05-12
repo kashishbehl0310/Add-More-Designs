@@ -9,7 +9,7 @@ const fetchPostById = require("../../controllers/fetchPostById");
 
 let projectCopy = JSON.parse(JSON.stringify(projects));
 
-projectCopy = projectCopy.splice(0, 4)
+projectCopy = projectCopy.reverse().splice(0, 4)
 
 // Home Page Route
 siteRouter.get("/", (req, res) => {
