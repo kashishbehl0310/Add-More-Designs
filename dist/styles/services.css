@@ -5,6 +5,24 @@
   padding-top: 132px;
 }
 
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #services .intro-section div:nth-child(1) {
   min-width: 22%;
   display: flex;
@@ -52,6 +70,8 @@
 
 .services-primary .tab-details.active {
   display: flex;
+  -webkit-animation: 0.4s fade linear;
+  animation: 0.4s fade linear;
 }
 
 .services-primary .tab-details p {
@@ -189,6 +209,8 @@
   display: none;
   padding: 32px 24px;
 }
+
+
 
 @media (max-width: 500px) {
   #services .why-us {

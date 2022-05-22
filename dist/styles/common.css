@@ -159,6 +159,7 @@ input {
   height: 16px;
   background-color: var(--amdYellow);
   position: absolute;
+  transition: height 0.15s ease-out;
   bottom: 0px;
   left: 0;
   z-index: -1;
@@ -167,6 +168,7 @@ input {
 
 .button:hover:after {
   height: 32px;
+  transition: height 0.25s ease-in;
 }
 
 .button.btn-secondary::after {
@@ -747,7 +749,8 @@ input {
 }
 
 .modal {
-  display: none; /* Hidden by default */
+  visibility: hidden;
+  /* display: none; */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -757,7 +760,8 @@ input {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  
+  opacity: 0;
+  transition: opacity 500ms;
 }
 
 /* Modal Content */
@@ -769,7 +773,7 @@ input {
   justify-content: center;
   top: 50%;
   transform: translate(0%, 10%);
-  
+  transition: all 5s ease-in-out;
 }
 
 .modal-content > div {
@@ -785,6 +789,7 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 
 /* The Close Button */
@@ -890,6 +895,18 @@ input {
   align-items: flex-start;
 }
 
+.instagram_gallery {
+  display: flex;
+}
+
+.cross-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: fit-content;
+}
+
 @media (max-width: 500px) {
   #subscribe.modal {
     padding-top: 60px;
@@ -917,6 +934,7 @@ input {
   }
   .header {
     padding: 64px 32px;
+    padding-bottom: 0;
   }
   .header img {
     width: 42px;
@@ -1126,8 +1144,21 @@ input {
   .journal-nwl-form .newsletter-form {
     width: 100%;
   }
+  .project-item .project-image-container img {
+    height: unset;
+  }
+  .instagram_gallery {
+    flex-direction: column;
+  }
+  .instagram_gallery a {
+    width: 100%;
+  }
 }
 
 video {
   clip-path: inset(1px 1px);
+}
+
+#home video {
+  clip-path: unset;
 }
