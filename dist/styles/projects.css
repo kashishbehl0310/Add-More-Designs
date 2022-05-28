@@ -50,7 +50,7 @@
   height: 100%;
 }
 
-#project .gallery .img-block:nth-child(1) {
+#project .gallery .img-block.img-block-full {
   width: 100%;
 }
 

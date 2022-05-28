@@ -1,0 +1,65 @@
+<div class="cursor"></div>
+
+<script>
+  let latestMouseY, latestMouseX;
+let ticking = false;
+
+let cursor = document.querySelector('.cursor');
+
+// Check if using touch device
+function isTouchDevice() {
+    return 'ontouchstart' in window;
+  }
+
+ // Disable fany cursor on touch devices
+window.addEventListener('load', e => {
+  if(isTouchDevice()) {
+    cursor.classList.add('cursor--hide');
+  }
+  else {
+    cursor.classList.remove('cursor--hide');
+  }
+});
+
+ window.addEventListener('mousemove', e => {
+   latestMouseY = e.clientY;
+   latestMouseX = e.clientX;
+   requestTick();
+ });
+
+document.addEventListener('mouseover', e => {
+  if (e.target && (e.target.matches('a') || e.target.matches('button'))) {
+    cursor.classList.add('cursor--grow');
+  }
+});
+
+document.addEventListener('mouseout', e => {
+  if (e.target && ((e.target.matches('a')) || e.target.matches('button'))) {
+    cursor.classList.remove('cursor--grow');
+  }
+});
+
+// Checks if animation frame is already requested
+function requestTick() {
+    if(!ticking) {
+         requestAnimationFrame(updateCursor);
+     }
+     ticking = true;
+ }
+
+// // Use current values when animating
+function updateCursor() {
+  // Reset tick so we capture next mouse move
+  ticking = false;
+
+  let currentMouseY = latestMouseY;
+  let currentMouseX = latestMouseX;
+
+  cursor.style.top = `${currentMouseY}px`;
+  cursor.style.left = `${currentMouseX}px`;
+}
+
+ function clearCursor() {
+     cursor.classList.remove('cursor--grow');
+ }
+</script>

@@ -1,9 +1,11 @@
 <script>
   const sidebarButtons = document.querySelectorAll(".sidebar-toggle");
+  const sidebar = document.getElementById("sidebar-overlay");
   if (sidebarButtons && sidebarButtons.length > 0) {
     sidebarButtons.forEach(button => {
       button.addEventListener("click", () => {
         document.getElementById("sidebar").classList.toggle("collapsed");
+        sidebar.classList.toggle("show");
       })
     })
   }
@@ -78,6 +80,7 @@
 
     // close modal on click outside
     window.onclick = function(e) {
+    console.log(e.target);
     if (e.target === modal) {
       modal.style.visibility = "hidden";
       modal.style.opacity = 0;
@@ -86,6 +89,11 @@
 
     if (e.target === subcribeModal) {
       subcribeModal.style.display = "none";
+    }
+
+    if (e.target === sidebar) {
+      sidebar.classList.remove("show");
+      document.getElementById("sidebar").classList.add("collapsed");
     }
     // document.getElementById("sidebar").classList.toggle("collapsed");
   }

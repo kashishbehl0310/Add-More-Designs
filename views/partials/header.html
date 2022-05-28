@@ -1,33 +1,35 @@
 <div class="header">
   <img class="sidebar-toggle" src="/img/nav_button.png" />
 </div>
-<div
-  id="sidebar"
-  class="collapsed"
->
-  <ul>
-    <li>
-      <a href="/">Home</a>
-    </li>
-    <li>
-      <a href="/work">Work</a>
-    </li>
-    <li>
-      <a href="/about">About</a>
-    </li>
-    <li>
-      <a href="/services">
-        Services
-      </a>
-    </li>
-    <li>
-      <a href="/journal">Journal</a>
-    </li>
-    <li>
-      <a class="modal-trigger-btn">Contact</a>
-    </li>
-  </ul>
-  <!-- <img class="sidebar-toggle" src="/img/nav_button.png" /> -->
+<div class="sidebar-overlay" id="sidebar-overlay">
+  <div
+    id="sidebar"
+    class="collapsed"
+  >
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/work">Work</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/services">
+          Services
+        </a>
+      </li>
+      <li>
+        <a href="/journal">Journal</a>
+      </li>
+      <li>
+        <a class="modal-trigger-btn">Contact</a>
+      </li>
+    </ul>
+    <!-- <img class="sidebar-toggle" src="/img/nav_button.png" /> -->
+  </div>
 </div>
 <%- include("contactFormModal.html") %>
 <%- include("subscribeFormModal.html") %>

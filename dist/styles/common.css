@@ -403,16 +403,18 @@ input {
 
 .row-banner {
   background-color: var(--amdGreen);
-  padding: 16px 0px;
+  /* padding: 16px 0px; */
   cursor: pointer;
 }
 
 .row-banner.secondary {
   background-color: var(--amdBlueSecondary);
-  cursor: default;
+  cursor: pointer;
 }
 
 .marquee{
+  padding: 16px 0px;
+
   -webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -746,6 +748,19 @@ input {
   color: var(--amdBluePrimary);
   font-family: StingerFit;
   margin-bottom: 16px;
+}
+
+.sidebar-overlay {
+  width: 0;
+  position: fixed;
+  height: 0;
+  z-index: 99;
+}
+
+.sidebar-overlay.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal {
@@ -1162,3 +1177,24 @@ video {
 #home video {
   clip-path: unset;
 }
+
+.cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  border: solid 1px white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+  transform-origin: 100% 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+.cursor--grow {
+  width: 80px;
+  height: 80px;
+}
+/* .cursor--hide {
+  opacity: 0;
+} */
