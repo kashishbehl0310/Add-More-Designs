@@ -10,6 +10,11 @@ body {
   font-stretch: normal;
   margin: 0;
   font-family: StingerFit;
+  cursor: none;
+}
+
+body a {
+  cursor: none !important;
 }
 
 @font-face {
@@ -1183,8 +1188,9 @@ video {
   width: 10px;
   height: 10px;
   opacity: 1;
-  background-color: var(--amdPink);
-  mix-blend-mode: hard-light;
+  background-color: var(--amdGreen);
+  mix-blend-mode: multiply;
+  /* mix-blend-mode: hard-light; */
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.3s ease-out, height 0.3s ease-out;

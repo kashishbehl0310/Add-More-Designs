@@ -4,6 +4,7 @@
 <script>
  (function($){
 		$(window).on('load', function(){
+			console.log('loaded')
 			$.instagramFeed({
 				'username': 'addmoredesign_studio',
 				'container': "#instagram-feed-demo",
@@ -11,15 +12,17 @@
 				'display_biography': false,
 				'display_gallery': true,
 				'get_raw_json': false,
-        'display_captions': true,
+        		'display_captions': true,
 				'callback': null,
 				'styling': true,
 				'items': 4,
 				'items_per_row': 4,
 				'margin': 0,
-        "lazy_load": true,
-        "styling": false
+				"lazy_load": true,
+				"styling": false
 			});
+		}).on('error', function(e) {
+			console.log('error', e)
 		});
 	})(jQuery);
   </script>
