@@ -5,16 +5,15 @@ const jourmal = [
     description: "We envision making way for better representation, making design more accessible, helping create brands with strong core values, and to help us be more intentional in our lives.",
     coverImage: "/blog/Blog 1_1.jpg",
     author: "Kumud Gupta",
-    publishedOn: "Jan 25, 2022",
+    publishedOn: "July 18, 2022",
     sections: [
       {
         para: "We envision making way for better representation, making design more accessible, helping create brands with strong core values, and to help us be more intentional in our lives. Here’s how -"
       },
       {
         heading: "Inclusivity",
-        para: `We don’t believe in feminine/masculine design. Design isn’t cishet as some people would have you believe. we love working with people for whom inclusive communication is a necessity, and for whom pride isn’t limited to a rainbow display picture.
-        \n\n
-        We work with people regardless of who they are as long as they try to be inclusive and believe in doing better. We make it a case to keep our strategy, communication, and design while building brands unless differentiation is somehow necessary to make a point.
+        para: `We don’t believe in feminine/masculine design. Design isn’t cishet as some people would have you believe.
+        We love working with people for whom inclusive communication is a necessity, and for whom pride isn’t limited to a rainbow display picture or those who aren’t afraid of having their notions challenged. We work with people regardless of who they are as long as they try to be inclusive and believe in doing better. We make it a case to keep our strategy, communication, and design while building brands unless differentiation is somehow necessary to make a point. In an effort to make direct change in people’s lives, we’ve pledged to donate 2% of our earnings every month to LGBTQIA+ people via different NGOs starting July 2022.
         `,
         gallery: ["/blog/Blog 1_2.jpg"]
       },

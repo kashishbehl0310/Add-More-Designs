@@ -35,10 +35,13 @@
   if (modalButton && modalButton.length > 0) {
     for (let i = 0; i < modalButton.length; i++) {
       modalButton[i].onclick = function(e) {
+        if (modalButton[i].parentNode.className === 'contact-btn-sidebar') {
+          document.getElementById("sidebar").classList.toggle("collapsed");
+          document.getElementById("sidebar-overlay").classList.toggle("show")
+        }
         modal.style.visibility = "visible";
         modal.style.opacity = 1;
         modal.style.height = "100vh";
-        console.log(modal);
       }
     }
   }
@@ -80,7 +83,6 @@
 
     // close modal on click outside
     window.onclick = function(e) {
-    console.log(e.target);
     if (e.target === modal) {
       modal.style.visibility = "hidden";
       modal.style.opacity = 0;

@@ -28,13 +28,25 @@ window.addEventListener('load', e => {
  });
 
 document.addEventListener('mouseover', e => {
-  if (e.target && (e.target.matches('a') || e.target.matches('button') || e.target.matches('.anchor-img') || e.target.matches('.span-btn'))) {
+  if (e.target && (e.target.matches('a')
+  || e.target.matches('button')
+  || e.target.matches('.anchor-img')
+  || e.target.matches('.span-btn')
+  || e.target.matches('svg')
+  || e.target.matches('.social-share-icon')
+  )) {
     cursor.classList.add('cursor--grow');
   }
 });
 
 document.addEventListener('mouseout', e => {
-  if (e.target && ((e.target.matches('a')) || e.target.matches('button') || e.target.matches('.anchor-img') || e.target.matches('.span-btn'))) {
+  if (e.target && ((e.target.matches('a'))
+  || e.target.matches('button')
+  || e.target.matches('.anchor-img')
+  || e.target.matches('.span-btn')
+  || e.target.matches('svg')
+  || e.target.matches('.social-share-icon')
+  )) {
     cursor.classList.remove('cursor--grow');
   }
 });

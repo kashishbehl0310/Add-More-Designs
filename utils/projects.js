@@ -190,7 +190,7 @@ const projects = [
     },
     intro: "Social media visuals for the next door social media marketer.",
     heading: "Social media visuals for the next door social media marketer.",
-    description: "Easily one of our favorite client, divya napa n co. is a social media marketing agency run by a husband-wife duo (and their two adorable dogs). We create all kinds of Instagram collateral for them following the visual moodboard we created for their brand.",
+    description: "Easily one of our favorite client, divya napa n co. is a social media marketing agency run by a husband-wife duo (and their two adorable dogs). We created all kinds of Instagram collateral for them following the visual moodboard we created for their brand.",
     coverImage: "/projects/dnc/Custom Size – 47.jpg",
     thumbnails: [
       "/projects/dnc/Custom Size – 51.jpg",
