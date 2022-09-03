@@ -135,9 +135,20 @@
     .then((response) => {
       return response.json();
     })
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+
+      // closing the modal on form fill success
+      modal.style.visibility = "hidden";
+      modal.style.opacity = 0;
+      modal.style.height = 0;
+    })
     .catch((err) => {
       console.log(err);
+      // closing the modal on form fill error
+      modal.style.visibility = "hidden";
+      modal.style.opacity = 0;
+      modal.style.height = 0;
     })
   }
 

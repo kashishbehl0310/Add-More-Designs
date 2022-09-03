@@ -238,28 +238,39 @@ const projects = [
       insta: "",
       fb: ""
     },
-    // next: "/project/dear-klairs",
+    prev: "/project/elio",
     next: "/project/dnc"
   },
-  // {
-  //   id: "dear-klairs",
-  //   name: "Dear Klairs (India)",
-  //   clientDetails: {
-  //     name: "Dear Klairs (India)",
-  //     year: "2020",
-  //     services: ["Visual moodboarding", "Social Media Design"]
-  //   },
-  //   intro: "Visuals for a brand that brings amazing Korean skincare to the world.",
-  //   heading: "Visuals for a brand that brings amazing Korean skincare to the world.",
-  //   description: "Klairs don’t an introduction to a skincare enthusiast. But for others- they are a vegan and cruelty free skincare brand that was approved by the Korea Agency of Vegan Certification and Services. We created Instagram posts for their Indian page on the strategy provided by Atlancer.",
-  //   coverImage: "project-1.png",
-  //   gallery: ["project-1.png", "project-2.png", "project-1.png", "project-2.png"],
-  //   socialMedia: {
-  //     insta: "",
-  //     fb: ""
-  //   },
-  //   prev: "/project/sundaze"
-  // }
+  {
+    id: "elio",
+    name: "Elio",
+    clientDetails: {
+      name: "Elio",
+      year: "2022",
+      services: ["Branding", "Packaging"]
+    },
+    intro: "Creating a premium wellness brand which focuses on quality product and ethical sourcing.",
+    heading: "Creating a premium wellness brand which focuses on quality product and ethical sourcing.",
+    description: "While they’ve started with launching premium quality teas, Elio is a wellness brand at heart. Its goal is to have a persona that stretches beyond its products to be a trusted mentor for your wellness journey. Since Elio needed to break through in an increasingly saturated market, we decided to craft a luxurious experience like no other.",
+    coverImage: "/projects/elio/3.jpg",
+    thumbnails: [
+      "/projects/elio/1.jpg",
+      "/projects/elio/2.jpg",
+    ],
+    gallery: [
+      
+      "/projects/elio/4.jpg",
+      "/projects/elio/5.jpg",
+      "/projects/elio/6.jpg",
+      "/projects/elio/7.jpg",
+      "/projects/elio/8.jpg",
+    ],
+    socialMedia: {
+      insta: "",
+      fb: ""
+    },
+    next: "/project/sundaze"
+  },
 ]
 
 module.exports = projects;
