@@ -80,8 +80,11 @@
     <script>
 
       const subscribeNewsLetter = (formData) => {
-        fetch("/api/subscribe", {
+        fetch("https://stormy-badlands-97380.herokuapp.com/mail/subscribe", {
           method: "POST",
+          headers: {
+            'Access-Control-Request-Private-Network': 'true'
+          },
           body: formData
         })
         .then((respnse) => {
