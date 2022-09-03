@@ -128,7 +128,7 @@
 
   // send contact form data
   const sendDetails = (mail) => {
-    fetch("/api/save-details", {
+    fetch("http://localhost:8000/mail/save-details", {
       method: "POST",
       body: mail
     })

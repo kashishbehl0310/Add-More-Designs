@@ -254,7 +254,7 @@
       homeform.addEventListener("submit", (e) => {
         e.preventDefault();
         let mail = new FormData(homeform);
-        fetch("/api/save-details", {
+        fetch("http://localhost:8000/mail/save-details", {
           method: "POST",
           body: mail
         })
