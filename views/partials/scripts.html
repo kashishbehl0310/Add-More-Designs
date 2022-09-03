@@ -128,7 +128,7 @@
 
   // send contact form data
   const sendDetails = (mail) => {
-    fetch("http://localhost:8000/mail/save-details", {
+    fetch("https://stormy-badlands-97380.herokuapp.com/mail/save-details", {
       method: "POST",
       body: mail
     })
