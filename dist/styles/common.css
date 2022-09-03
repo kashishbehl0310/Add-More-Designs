@@ -91,7 +91,7 @@ img {
   max-width: 100%;
 }
 
-input {
+input, textarea {
   font-family: GeneralSansRegular;
   color: var(--amdBlack);
   font-size: 16px;
@@ -1221,3 +1221,15 @@ video {
 /* .cursor--hide {
   opacity: 0;
 } */
+
+@media (max-width: 500px) {
+  .cursor {
+    display: none;
+  }
+  body {
+    cursor: pointer;
+  }
+  body a {
+    cursor: pointer !important;
+  } 
+}

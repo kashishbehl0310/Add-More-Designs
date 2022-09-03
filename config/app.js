@@ -19,8 +19,8 @@ dotenv.config({
 });
 
 const config = {
-  nodemailerEmail: process.env.NODEMAILER_EMAIL || "kashishbehl36@gmail.com",
-  nodemailerPass: process.env.NODEMAILER_PASS || "ckdmbdcmjygvndlz",
+  nodemailerEmail: process.env.NODEMAILER_EMAIL || "addmoredesign.studio@gmail.com",
+  nodemailerPass: process.env.NODEMAILER_PASS || "mrcmfjbhvarirlpi",
   port: process.env.PORT || 5000,
   env: process.env.NODE_ENV || "development",
 }
