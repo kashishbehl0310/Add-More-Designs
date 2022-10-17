@@ -269,8 +269,38 @@ const projects = [
       insta: "",
       fb: ""
     },
-    next: "/project/sundaze"
+    next: "/project/sundaze",
+    prev: '/project/little_titans'
   },
+  {
+    id: 'little_titans',
+    name: 'The Little Titans',
+    clientDetails: {
+      name: 'The Little Titans',
+      year: '2022',
+      services: ['Visual moodboarding', 'Social Media Design']
+    },
+    intro: "Creating social media visuals for a new-age nursery school based in Hyderabad.",
+    heading: "Creating social media visuals for a new-age nursery school based in Hyderabad.",
+    description: "The Little Titans has the curriculum and the delivery tools from the world's leading education system - Finland! They work with a value centric approach and move away from traditional schooling methods. I’ve been making their Instagram visuals to promote their ways.",
+    coverImage: "/projects/elio/3.jpg",
+    thumbnails: [
+      "/projects/elio/1.jpg",
+      "/projects/elio/2.jpg",
+    ],
+    gallery: [
+      "/projects/elio/4.jpg",
+      "/projects/elio/5.jpg",
+      "/projects/elio/6.jpg",
+      "/projects/elio/7.jpg",
+      "/projects/elio/8.jpg",
+    ],
+    socialMedia: {
+      insta: "",
+      fb: ""
+    },
+    next: "/project/elio"
+  }
 ]
 
 module.exports = projects;
