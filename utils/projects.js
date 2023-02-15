@@ -299,7 +299,37 @@ const projects = [
       insta: "",
       fb: ""
     },
-    next: "/project/elio"
+    next: "/project/elio",
+    prev: "/project/chc"
+  },
+  {
+    id: 'chc',
+    name: 'The Careful Health Company<sup>TM</sup>',
+    clientDetails: {
+      name: 'The Careful Health Company<sup>TM</sup>',
+      year: '2022',
+      services: ['Art Direction', 'Team Management', 'Branding Packaging Design', 'Website Design & Development']
+    },
+    intro: "Building a wellness conglomerate based in the US that delivers high quality products at an accessible price point.",
+    heading: "Building a wellness conglomerate based in the US that delivers high quality products at an accessible price point.",
+    description: "The Careful Health Company<sup>TM</sup> is a one-of-it’s kind company that is bringing end-to-end production of wellness solutions to ensure top-notch quality and unmatched low price-point, covering everything from gummies, capsules, tablets to serums and oils. I developed brand identity and packaging for them and their 15+ brands, as well as managed their in-house creative team.",
+    coverImage: "/projects/chc/3.jpg",
+    thumbnails: [
+      "/projects/chc/1.jpg",
+      "/projects/chc/2.jpg",
+    ],
+    gallery: [
+      "/projects/chc/4.jpg",
+      "/projects/chc/5.jpg",
+      "/projects/chc/6.jpg",
+      "/projects/chc/7.jpg",
+      "/projects/chc/8.jpg",
+    ],
+    socialMedia: {
+      insta: "",
+      fb: ""
+    },
+    next: "/project/little_titans"
   }
 ]
 
