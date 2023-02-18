@@ -264,7 +264,7 @@
       homeform.addEventListener("submit", (e) => {
         e.preventDefault();
         let mail = new FormData(homeform);
-        fetch("https://stormy-badlands-97380.herokuapp.com/mail/save-details", {
+        fetch("https://amd-email-service.onrender.com/mail/save-details", {
           method: "POST",
           body: mail
         })
