@@ -80,20 +80,33 @@
     <script>
 
       const subscribeNewsLetter = (formData) => {
-        fetch("https://stormy-badlands-97380.herokuapp.com/mail/subscribe", {
-          method: "POST",
+        fetch('https://amd-email-service.onrender.com/mail/test', {
+          method: 'GET',
           headers: {
             'Access-Control-Request-Private-Network': 'true'
-          },
-          body: formData
-        })
-        .then((respnse) => {
-          return respnse.json();
+          }
+        }).then((response) => {
+          console.log(response);
+          return response.json();
         })
         .then((data) => console.log(data))
         .catch((err) => {
           console.log(err);
         });
+        // fetch("https://stormy-badlands-97380.herokuapp.com/mail/subscribe", {
+        //   method: "POST",
+        //   headers: {
+        //     'Access-Control-Request-Private-Network': 'true'
+        //   },
+        //   body: formData
+        // })
+        // .then((respnse) => {
+        //   return respnse.json();
+        // })
+        // .then((data) => console.log(data))
+        // .catch((err) => {
+        //   console.log(err);
+        // });
       }
 
       const forms = document.getElementsByClassName("newsletter-form");
