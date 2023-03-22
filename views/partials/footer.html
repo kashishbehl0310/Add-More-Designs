@@ -77,9 +77,28 @@
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
 
-      const subscribeNewsLetter = (formData) => {
+      const sendToastAndClear = (form) => {
+        Toastify({
+          text: "Your response was submitted",
+          duration: 2000,
+          close: false,
+          gravity: "top", // `top` or `bottom`
+          position: "right", // `left`, `center` or `right`
+          stopOnFocus: true, // Prevents dismissing of toast on hover
+          style: {
+            background: "#EBFCF5",
+            borderBottom: '4px solid #35D39D',
+            color: '#333'
+          },
+          onClick: function(){} // Callback after click
+        }).showToast();
+        form.reset();
+      }
+
+      const subscribeNewsLetter = (form, formData) => {
         fetch("https://amd-email-service.onrender.com/mail/subscribe", {
           method: "POST",
           headers: {
@@ -88,9 +107,12 @@
           body: formData
         })
         .then((respnse) => {
+          sendToastAndClear(form);
           return respnse.json();
         })
-        .then((data) => console.log(data))
+        .then((data) => {
+          // sendToastAndClear(form);
+        })
         .catch((err) => {
           console.log(err);
         });
@@ -102,7 +124,7 @@
           forms[i].addEventListener("submit", (e) => {
             e.preventDefault();
             let formData = new FormData(forms[i]);
-            subscribeNewsLetter(formData);
+            subscribeNewsLetter(forms[i], formData);
           })
         }
       }

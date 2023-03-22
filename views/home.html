@@ -261,6 +261,7 @@
           body: mail
         })
         .then((response) => {
+          sendToastAndClear(homeform);
           return response.json();
         })
         .then((data) => console.log(data))
