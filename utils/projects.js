@@ -329,7 +329,72 @@ const projects = [
       insta: "",
       fb: ""
     },
-    next: "/project/little_titans"
+    next: "/project/little_titans",
+    prev: "/project/soaked",
+  },
+  {
+    id: 'soaked',
+    name: 'soaked',
+    clientDetails: {
+      name: 'soaked',
+      year: '2023',
+      services: ['Packaging Design']
+    },
+    intro: "Creating a packaging system for a delicious and easy ready-to-eat oats brand that’s actually good for you.",
+    heading: "Creating a packaging system for a delicious and easy ready-to-eat oats brand that’s actually good for you.",
+    description: "Soaked Oats is your new breakfast and snacking solution. They came to us to help develop an easy-to-replicate cost-effective packaging system for their current and future range of ready-to-eat soaked oats. This project was commissioned by Atlancer.",
+    coverImage: "/projects/soaked/3.jpg",
+    thumbnails: [
+      "/projects/soaked/1.jpg",
+      "/projects/soaked/2.jpg",
+    ],
+    gallery: [
+      "/projects/soaked/4.jpg",
+      "/projects/soaked/5.jpg",
+      "/projects/soaked/6.jpg",
+      "/projects/soaked/7.jpg",
+    ],
+    socialMedia: {
+      insta: "",
+      fb: ""
+    },
+    next: "/project/chc",
+    prev: "/project/no-nasties"
+  },
+  {
+    id: 'no-nasties',
+    name: 'No Nasties',
+    clientDetails: {
+      name: 'No Nasties',
+      year: '2023',
+      services: ['Meta Ads Design' ,'Google Ads Design', 'Website Collaterals', 'Emailer Design', 'Klaviyo Setup']
+    },
+    intro: "Designing for a better planet - Helping a 100% sustainable brand reach far and wide with magazine-worthy visuals.",
+    heading: "Designing for a better planet - Helping a 100% sustainable brand reach far and wide with magazine-worthy visuals.",
+    description: "Soaked Oats is your new breakfast and snacking solution. They came to us to help develop an easy-to-replicate cost-effective packaging system for their current and future range of ready-to-eat soaked oats. This project was commissioned by Atlancer.",
+    coverImage: "/projects/no-nasties/3.jpg",
+    thumbnails: [
+      "/projects/no-nasties/1.jpg",
+      "/projects/no-nasties/2.jpg",
+    ],
+    gallery: [
+      "/projects/no-nasties/4.mp4",
+      "/projects/no-nasties/5.jpg",
+      "/projects/no-nasties/6.jpg",
+      "/projects/no-nasties/7.jpg",
+      "/projects/no-nasties/8.jpg",
+      "/projects/no-nasties/15.mp4",
+      "/projects/no-nasties/16.mp4",
+      "/projects/no-nasties/17.mp4",
+      "/projects/no-nasties/18.mp4",
+      "/projects/no-nasties/19.mp4",
+      "/projects/no-nasties/20.mp4",
+    ],
+    socialMedia: {
+      insta: "",
+      fb: ""
+    },
+    next: "/project/soaked"
   }
 ]
 
