@@ -371,7 +371,7 @@ const projects = [
     },
     intro: "Designing for a better planet - Helping a 100% sustainable brand reach far and wide with magazine-worthy visuals.",
     heading: "Designing for a better planet - Helping a 100% sustainable brand reach far and wide with magazine-worthy visuals.",
-    description: "Soaked Oats is your new breakfast and snacking solution. They came to us to help develop an easy-to-replicate cost-effective packaging system for their current and future range of ready-to-eat soaked oats. This project was commissioned by Atlancer.",
+    description: "No Nasties is a truly sustainable clothing brand with measurable positive impact on the planet and unmatched quality and designs. We’ve been designing various digital collateral including ads & newsletters for them to reach more customers and sell more. Our best result-driving project yet!",
     coverImage: "/projects/no-nasties/3.jpg",
     thumbnails: [
       "/projects/no-nasties/1.jpg",
