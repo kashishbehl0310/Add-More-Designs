@@ -118,14 +118,14 @@
         });
       }
 
-      const forms = document.getElementsByClassName("newsletter-form");
-      if (forms && forms.length > 0) {
-        for (let i = 0; i < forms.length; i ++) {
-          forms[i].addEventListener("submit", (e) => {
-            e.preventDefault();
-            let formData = new FormData(forms[i]);
-            subscribeNewsLetter(forms[i], formData);
-          })
-        }
-      }
+      // const forms = document.getElementsByClassName("newsletter-form");
+      // if (forms && forms.length > 0) {
+      //   for (let i = 0; i < forms.length; i ++) {
+      //     forms[i].addEventListener("submit", (e) => {
+      //       e.preventDefault();
+      //       let formData = new FormData(forms[i]);
+      //       subscribeNewsLetter(forms[i], formData);
+      //     })
+      //   }
+      // }
     </script>

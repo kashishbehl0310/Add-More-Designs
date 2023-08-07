@@ -252,23 +252,23 @@
     
     <%- include("partials/footer.html") %>
     <script>
-      const homeform = document.getElementById("home-form");
-      homeform.addEventListener("submit", (e) => {
-        e.preventDefault();
-        let mail = new FormData(homeform);
-        fetch("https://amd-email-service.onrender.com/mail/save-details", {
-          method: "POST",
-          body: mail
-        })
-        .then((response) => {
-          sendToastAndClear(homeform);
-          return response.json();
-        })
-        .then((data) => console.log(data))
-        .catch((err) => {
-          console.log(err);
-        })
-      });
+      // const homeform = document.getElementById("home-form");
+      // homeform.addEventListener("submit", (e) => {
+      //   e.preventDefault();
+      //   let mail = new FormData(homeform);
+      //   fetch("https://amd-email-service.onrender.com/mail/save-details", {
+      //     method: "POST",
+      //     body: mail
+      //   })
+      //   .then((response) => {
+      //     sendToastAndClear(homeform);
+      //     return response.json();
+      //   })
+      //   .then((data) => console.log(data))
+      //   .catch((err) => {
+      //     console.log(err);
+      //   })
+      // });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script>
